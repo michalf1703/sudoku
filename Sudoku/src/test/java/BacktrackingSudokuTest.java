@@ -13,8 +13,8 @@ public class BacktrackingSudokuTest {
     @BeforeEach
     public void setUp() {
 
-        sudokuBoard = new SudokuBoard();
-        solve = new BacktrackingSudokuSolver();
+        SudokuSolver solverek = new BacktrackingSudokuSolver();
+        sudokuBoard = new SudokuBoard(solverek);
     }
 
     @Test
@@ -68,10 +68,11 @@ public class BacktrackingSudokuTest {
     @Test
     public void solveRepeatBoardTest() {
 
-        SudokuBoard object1 = new SudokuBoard();
-        SudokuBoard object2 = new SudokuBoard();
-        solve.solve(object1);
-        solve.solve(object2);
+        SudokuSolver solverek1 = new BacktrackingSudokuSolver();
+        SudokuBoard object1 = new SudokuBoard(solverek1);
+        SudokuBoard object2 = new SudokuBoard(solverek1);
+        object1.solveGame();
+        object2.solveGame();
 
         assertTrue(!object1.equals(object2));
     }

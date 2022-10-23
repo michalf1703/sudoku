@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.38.0" timestamp="2022-10-23T20:38:41.666">
-<file name="C:\Users\Hp\Desktop\kompo\Sudoku\src\main\java\BacktrackingSudokuSolver.java">
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.38.0" timestamp="2022-10-24T01:45:02.580">
+<file name="C:\Users\artur\IdeaProjects\repo\jm_pn_1200_07\Sudoku\src\main\java\BacktrackingSudokuSolver.java">
 <violation beginline="23" endline="23" begincolumn="45" endcolumn="74" rule="UselessParentheses" ruleset="Code Style" class="BacktrackingSudokuSolver" method="solve" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
@@ -11,33 +11,21 @@ Useless parentheses.
 Useless parentheses.
 </violation>
 </file>
-<error filename="C:\Users\Hp\Desktop\kompo\Sudoku\src\main\java\SudokuBoard.java" msg="PMDException: Error while processing C:\Users\Hp\Desktop\kompo\Sudoku\src\main\java\SudokuBoard.java">
-<![CDATA[net.sourceforge.pmd.PMDException: Error while processing C:\Users\Hp\Desktop\kompo\Sudoku\src\main\java\SudokuBoard.java
-	at net.sourceforge.pmd.SourceCodeProcessor.processSourceCodeWithoutCache(SourceCodeProcessor.java:128)
-	at net.sourceforge.pmd.SourceCodeProcessor.processSourceCode(SourceCodeProcessor.java:100)
-	at net.sourceforge.pmd.SourceCodeProcessor.processSourceCode(SourceCodeProcessor.java:62)
-	at net.sourceforge.pmd.processor.PmdRunnable.call(PmdRunnable.java:85)
-	at net.sourceforge.pmd.processor.PmdRunnable.call(PmdRunnable.java:29)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 3053 out of bounds for length 2946
-	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
-	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
-	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
-	at net.sourceforge.pmd.lang.java.typeresolution.PMDASMClassLoader.getImportedClasses(PMDASMClassLoader.java:118)
-	at net.sourceforge.pmd.lang.java.typeresolution.ClassTypeResolver.populateClassName(ClassTypeResolver.java:1617)
-	at net.sourceforge.pmd.lang.java.typeresolution.ClassTypeResolver.visit(ClassTypeResolver.java:214)
-	at net.sourceforge.pmd.lang.java.ast.ASTCompilationUnit.jjtAccept(ASTCompilationUnit.java:44)
-	at net.sourceforge.pmd.lang.java.typeresolution.TypeResolutionFacade.initializeWith(TypeResolutionFacade.java:21)
-	at net.sourceforge.pmd.lang.java.AbstractJavaHandler$5.start(AbstractJavaHandler.java:121)
-	at net.sourceforge.pmd.SourceCodeProcessor.usesTypeResolution(SourceCodeProcessor.java:178)
-	at net.sourceforge.pmd.SourceCodeProcessor.processSource(SourceCodeProcessor.java:205)
-	at net.sourceforge.pmd.SourceCodeProcessor.processSourceCodeWithoutCache(SourceCodeProcessor.java:118)
-	... 10 more
-]]>
-</error>
+<file name="C:\Users\artur\IdeaProjects\repo\jm_pn_1200_07\Sudoku\src\main\java\SudokuBoard.java">
+<violation beginline="52" endline="52" begincolumn="42" endcolumn="52" rule="UselessParentheses" ruleset="Code Style" class="SudokuBoard" method="checkValid" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="52" endline="52" begincolumn="65" endcolumn="75" rule="UselessParentheses" ruleset="Code Style" class="SudokuBoard" method="checkValid" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="53" endline="53" begincolumn="49" endcolumn="60" rule="UselessParentheses" ruleset="Code Style" class="SudokuBoard" method="checkValid" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="53" endline="53" begincolumn="73" endcolumn="84" rule="UselessParentheses" ruleset="Code Style" class="SudokuBoard" method="checkValid" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="64" endline="64" begincolumn="20" endcolumn="46" rule="OverrideBothEqualsAndHashcode" ruleset="Error Prone" class="SudokuBoard" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_errorprone.html#overridebothequalsandhashcode" priority="3">
+Ensure you override both equals() and hashCode()
+</violation>
+</file>
 </pmd>

@@ -21,8 +21,8 @@
 <a class="jxr_linenumber" name="L13" href="#L13">13</a>      @BeforeEach
 <a class="jxr_linenumber" name="L14" href="#L14">14</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setUp() {
 <a class="jxr_linenumber" name="L15" href="#L15">15</a>  
-<a class="jxr_linenumber" name="L16" href="#L16">16</a>          sudokuBoard = <strong class="jxr_keyword">new</strong> SudokuBoard();
-<a class="jxr_linenumber" name="L17" href="#L17">17</a>          solve = <strong class="jxr_keyword">new</strong> BacktrackingSudokuSolver();
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>          SudokuSolver solverek = <strong class="jxr_keyword">new</strong> BacktrackingSudokuSolver();
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>          sudokuBoard = <strong class="jxr_keyword">new</strong> SudokuBoard(solverek);
 <a class="jxr_linenumber" name="L18" href="#L18">18</a>      }
 <a class="jxr_linenumber" name="L19" href="#L19">19</a>  
 <a class="jxr_linenumber" name="L20" href="#L20">20</a>      @Test
@@ -76,14 +76,15 @@
 <a class="jxr_linenumber" name="L68" href="#L68">68</a>      @Test
 <a class="jxr_linenumber" name="L69" href="#L69">69</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> solveRepeatBoardTest() {
 <a class="jxr_linenumber" name="L70" href="#L70">70</a>  
-<a class="jxr_linenumber" name="L71" href="#L71">71</a>          SudokuBoard object1 = <strong class="jxr_keyword">new</strong> SudokuBoard();
-<a class="jxr_linenumber" name="L72" href="#L72">72</a>          SudokuBoard object2 = <strong class="jxr_keyword">new</strong> SudokuBoard();
-<a class="jxr_linenumber" name="L73" href="#L73">73</a>          solve.solve(object1);
-<a class="jxr_linenumber" name="L74" href="#L74">74</a>          solve.solve(object2);
-<a class="jxr_linenumber" name="L75" href="#L75">75</a>  
-<a class="jxr_linenumber" name="L76" href="#L76">76</a>          assertTrue(!object1.equals(object2));
-<a class="jxr_linenumber" name="L77" href="#L77">77</a>      }
-<a class="jxr_linenumber" name="L78" href="#L78">78</a>  }
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>          SudokuSolver solverek1 = <strong class="jxr_keyword">new</strong> BacktrackingSudokuSolver();
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>          SudokuBoard object1 = <strong class="jxr_keyword">new</strong> SudokuBoard(solverek1);
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>          SudokuBoard object2 = <strong class="jxr_keyword">new</strong> SudokuBoard(solverek1);
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>          object1.solveGame();
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>          object2.solveGame();
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>  
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          assertTrue(!object1.equals(object2));
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>      }
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>  }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2022. All rights reserved.</div>

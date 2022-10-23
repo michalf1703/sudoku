@@ -1,7 +1,7 @@
-
-
 public class SudokuBoard {
 
+
+    private SudokuSolver solver;
     private int[][] board = new int[9][9];
 
     public int get(int x, int y) {
@@ -12,13 +12,22 @@ public class SudokuBoard {
         this.board[x][y] = value;
     }
 
-    private boolean checkValid() {
+    public SudokuBoard(int[][] board) {
+        this.board = board;
+    }
+
+    public SudokuBoard(SudokuSolver solverek1) {
+        solver = solverek1;
+    }
+
+
+    public boolean checkValid(int[][] tab) {
 
         //SPRAWDZANIE RZEDU
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 for (int k = j + 1; k < 9; k++) {
-                    if (board[i][j] == board[i][k]) {
+                    if (tab[i][j] == tab[i][k]) {
                         return false;
                     }
                 }
@@ -28,7 +37,7 @@ public class SudokuBoard {
         for (int j = 0; j < 9; j++) {
             for (int i = 0; i < 9; i++) {
                 for (int k = i + 1; k < 9; k++) {
-                    if (board[i][j] == board[k][j]) {
+                    if (tab[i][j] == tab[k][j]) {
                         return false;
                     }
                 }
@@ -40,8 +49,8 @@ public class SudokuBoard {
                 //mały kwadrat (i, j)
                 for (int checked = 0; checked < 9; checked++) {
                     for (int compared = checked + 1; compared < 9; compared++) {
-                        if (board[i * 3 + (checked / 3)][j * 3 + (checked % 3)]
-                                == board[i * 3 + (compared / 3)][j * 3 + (compared % 3)]) {
+                        if (tab[i * 3 + (checked / 3)][j * 3 + (checked % 3)]
+                                == tab[i * 3 + (compared / 3)][j * 3 + (compared % 3)]) {
                             return false;
                         }
                     }
@@ -64,11 +73,6 @@ public class SudokuBoard {
     }
 
     @Override
-    public int hashCode() {
-        return 0;
-    }
-
-    @Override
     public String toString() {
         String result = "";
         for (int i = 0; i < 9; i++) {
@@ -80,39 +84,10 @@ public class SudokuBoard {
         return result;
     }
 
-
-    public void print() {
-        System.out.println(" ____________________");
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                if (j == 0) {
-                    System.out.print("|");
-                }
-
-                System.out.print(board[i][j] + " ");
-                if (j == 2 || j == 5) {
-                    System.out.print("|");
-                }
-                if (j == 8) {
-                    System.out.print("|");
-                }
-
-                if (j == 8 && i == 2) {
-                    System.out.print("\n");
-                    System.out.print(" --------------------");
-                }
-
-                if (j == 8 && i == 5) {
-                    System.out.print("\n");
-                    System.out.print(" --------------------");
-                }
-
-
-            }
-            System.out.println();
-        }
-        System.out.println(" --------------------");
+    public void solveGame() {
+        solver.solve(this);
     }
+
 
 }
 

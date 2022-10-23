@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class BacktrackingSudokuSolver {
+public class BacktrackingSudokuSolver implements SudokuSolver {
     public void solve(final SudokuBoard board) {
         Random rand = new Random();
         int[] startTab = new int[81];  //wartości początkowe

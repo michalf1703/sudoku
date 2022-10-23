@@ -8,7 +8,7 @@
 <div id="overview"><a href="../apidocs/BacktrackingSudokuSolver.html">View Javadoc</a></div><pre>
 <a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">import</strong> java.util.Random;
 <a class="jxr_linenumber" name="L2" href="#L2">2</a>   
-<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="BacktrackingSudokuSolver" href="..//BacktrackingSudokuSolver.html#BacktrackingSudokuSolver">BacktrackingSudokuSolver</a> {
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="BacktrackingSudokuSolver" href="..//BacktrackingSudokuSolver.html#BacktrackingSudokuSolver">BacktrackingSudokuSolver</a> <strong class="jxr_keyword">implements</strong> <a name="SudokuSolver" href="..//SudokuSolver.html#SudokuSolver">SudokuSolver</a> {
 <a class="jxr_linenumber" name="L4" href="#L4">4</a>       <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> solve(<strong class="jxr_keyword">final</strong> <a name="SudokuBoard" href="..//SudokuBoard.html#SudokuBoard">SudokuBoard</a> board) {
 <a class="jxr_linenumber" name="L5" href="#L5">5</a>           Random rand = <strong class="jxr_keyword">new</strong> Random();
 <a class="jxr_linenumber" name="L6" href="#L6">6</a>           <strong class="jxr_keyword">int</strong>[] startTab = <strong class="jxr_keyword">new</strong> <strong class="jxr_keyword">int</strong>[81];  <em class="jxr_comment">//wartości początkowe</em>
