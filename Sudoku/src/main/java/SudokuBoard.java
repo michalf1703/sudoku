@@ -1,84 +1,85 @@
-import java.util.Arrays;
-import  java.util.Random;
+
 
 public class SudokuBoard {
 
     private int[][] board = new int[9][9];
 
-    private boolean checkValid(int x) {
-        //WSPOLRZEDNE KOMORKI SIATKI
-        int row = x / 9;
-        int column = x % 9;
-        int number = board[row][column];
+    public int get(int x, int y) {
+        return board[x][y];
+    }
+
+    public void set(int x, int y, int value) {
+        this.board[x][y] = value;
+    }
+
+    private boolean checkValid() {
+
         //SPRAWDZANIE RZEDU
-        for (int i = 0; i < column; i++) {
-            if (number == board[row][i]) {
-                return false;
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                for (int k = j + 1; k < 9; k++) {
+                    if (board[i][j] == board[i][k]) {
+                        return false;
+                    }
+                }
             }
         }
         //SPRAWDZANIE KOLUMNY
-        for (int i = 0; i < row; i++) {
-            if (number == board[i][column]) {
-                return false;
+        for (int j = 0; j < 9; j++) {
+            for (int i = 0; i < 9; i++) {
+                for (int k = i + 1; k < 9; k++) {
+                    if (board[i][j] == board[k][j]) {
+                        return false;
+                    }
+                }
             }
         }
         //SPRAWDZANIE MALYCH KWADRATOW
-        int rowSquare = row / 3;
-        int columnSquare = column / 3;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                int newRowSquare = i + rowSquare * 3;
-                int newColumnSquare = j + columnSquare * 3;
-                if (number == board[newRowSquare][newColumnSquare]
-                        && (newRowSquare * 9 + newColumnSquare) < x) {
-                    return false;
+                //mały kwadrat (i, j)
+                for (int checked = 0; checked < 9; checked++) {
+                    for (int compared = checked + 1; compared < 9; compared++) {
+                        if (board[i * 3 + (checked / 3)][j * 3 + (checked % 3)]
+                                == board[i * 3 + (compared / 3)][j * 3 + (compared % 3)]) {
+                            return false;
+                        }
+                    }
                 }
             }
-
         }
         return true;
     }
 
-    public void fillBoard() {
-        Random rand = new Random();
-        int[] startTab = new int[81];
-        for (int i = 0; i < 81; i++) {
-            //ZNOWU WSPOLRZEDNE SIATKI
-            int row = i / 9;
-            int column = i % 9;
-
-            boolean nextStep = false;
-            if (startTab[i] == 0) {
-                //jeżeli krok do przodu to ustawiamy nową wartość początkową
-                startTab[i] = rand.nextInt(9) + 1;
-                board[row][column] = startTab[i];
-                do {
-                    if (checkValid(i)) {
-                        nextStep = true;
-                        break;
-                    }
-                    board[row][column] = board[row][column] % 9 + 1;
-                } while (board[row][column] != startTab[i]);
-            } else {
-                //jeżeli krok do tyłu to wykorzystujemy poprzednią wartość początkową
-                board[row][column] = board[row][column] % 9 + 1;
-                while (board[row][column] != startTab[i]) {
-                    if (checkValid(i)) {
-                        nextStep = true;
-                        break;
-                    }
-                    board[row][column] = board[row][column] % 9 + 1;
+    @Override
+    public boolean equals(final Object object) {
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (((SudokuBoard) object).get(i, j) != get(i, j)) {
+                    return false;
                 }
             }
-
-            //jeżeli żaden nie pasuje to się cofamy
-            if (!nextStep) {
-                startTab[i] = 0;
-                board[row][column] = 0;
-                i -= 2;
-            }
         }
+        return true;
     }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+        String result = "";
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                result += get(i, j) + " ";
+            }
+            result += "\n";
+        }
+        return result;
+    }
+
 
     public void print() {
         System.out.println(" ____________________");
@@ -113,13 +114,5 @@ public class SudokuBoard {
         System.out.println(" --------------------");
     }
 
-    //metoda napisana do testow
-    public int[][] getCopyBoard() {
-        int[][] getBoard = new int[9][];
-        for (int i = 0; i < 9; i++) {
-            getBoard[i] = Arrays.copyOf(board[i],9);
-        }
-        return getBoard;
-    }
 }
 

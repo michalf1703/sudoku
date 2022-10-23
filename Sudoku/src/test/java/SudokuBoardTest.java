@@ -12,75 +12,31 @@ public class SudokuBoardTest {
         sudokuBoard = new SudokuBoard();
     }
 
+    @Test
+    public void getAndSetTest() {
+        assertEquals(sudokuBoard.get(0, 0), 0);
+        sudokuBoard.set(1, 2, 3 );
+        assertEquals(sudokuBoard.get(1, 2), 3);
+    }
+
+    @Test
+    public void equalsTest() {
+        assertTrue(sudokuBoard.equals(sudokuBoard));
+    }
     //TESTY DLA KOLUMN
+
     @Test
-    public void checkColumnBoardTest() {
-        sudokuBoard.fillBoard();
-        int[][] board = sudokuBoard.getCopyBoard();
-
-
-        for (int j = 0; j < 9; j++) {
-            for (int i = 0; i < 9; i++) {
-                for (int i2 = i + 1; i2 < 9; i2++) {
-                    if (board[i][j] == board[i2][j]) {
-                        fail("There is error in column number " + j );
-                    }
-                }
-            }
+    public void toStringTest() {
+        String tmp = "";
+        for(int i = 0; i < 9; i++)
+        {
+            tmp += "0 0 0 0 0 0 0 0 0 \n";
         }
+        assertTrue(sudokuBoard.toString().equals(tmp));
     }
-    //TESTY DLA RZEDOW
-    @Test
-    public void checkRowBoardTest() {
-        sudokuBoard.fillBoard();
-        int[][] board = sudokuBoard.getCopyBoard();
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                for (int j2 = j + 1; j2 < 9; j2++) {
-                    if (board[i][j] == board[i][j2]) {
-                        fail("There is error in column number " + i);
-                    }
-                }
-            }
-        }
-    }
-    //TESTY DLA MALYCH KWADRATOW 3X3
-    @Test
-    public void checkSmallSquaresBoardTest() {
-        sudokuBoard.fillBoard();
-        int[][] board = sudokuBoard.getCopyBoard();
 
-        for (int I = 0; I < 3; I++) {
-            for (int J = 0; J < 3; J++) {
-                for (int checked = 0; checked < 9; checked++) {
-                    for (int compared = checked + 1; compared < 9; compared++) {
-                        if (board[I * 3 + (checked / 3)][J * 3 + (checked % 3)] ==
-                                board[I * 3 + (compared / 3)][J * 3 + (compared % 3)]) {
-                            fail("There is error in square(" + I + ", " + J + ")");
-                        }
-                    }
-                }
-            }
-        }
-    }
-    //TESTY DLA FILLBOARD, GENEROWANIE INNYCH PLANSZY
     @Test
-    public void fillBoardRepeatTest() {
-        int[][] testTab1;
-        int[][] testTab2;
-
-        sudokuBoard.fillBoard();
-        testTab1 = sudokuBoard.getCopyBoard();
-        sudokuBoard.fillBoard();
-        testTab2 = sudokuBoard.getCopyBoard();
-
-        boolean theSame = true;
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                if (testTab1[i][j] != testTab2[i][j])
-                    theSame = false;
-            }
-        }
-        assertTrue(!theSame);
+    public void hashCodeTest() {
+        assertEquals(sudokuBoard.hashCode(), 0);
     }
 }
