@@ -5,60 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e375e228-04f9-4e92-acf6-029786cc0d70" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Sudoku/src/main/java/BacktrackingSudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/src/main/java/BacktrackingSudokuSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/src/main/java/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/src/main/java/SudokuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/src/test/java/BacktrackingSudokuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/src/test/java/BacktrackingSudokuTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/src/test/java/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/src/test/java/SudokuBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/checkstyle-cachefile" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/checkstyle-cachefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/checkstyle-result.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/checkstyle-result.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/classes/BacktrackingSudokuSolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/classes/BacktrackingSudokuSolver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/classes/SudokuBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/classes/SudokuBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/pmd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/pmd.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/checkstyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/checkstyle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/checkstyle.rss" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/checkstyle.rss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/cpd.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/cpd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/dependencies.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/dependencies.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/dependency-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/dependency-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/jacoco/default/BacktrackingSudokuSolver.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/jacoco/default/BacktrackingSudokuSolver.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/jacoco/default/Main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/jacoco/default/Main.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/jacoco/default/SudokuBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/jacoco/default/SudokuBoard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/jacoco/default/SudokuBoard.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/jacoco/default/SudokuBoard.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/jacoco/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/jacoco/default/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/jacoco/default/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/jacoco/default/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/jacoco/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/jacoco/jacoco.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/jacoco/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/plugin-management.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/plugin-management.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/plugins.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/plugins.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/pmd.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/pmd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/project-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/project-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/project-reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/project-reports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/team.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/team.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/xref-test/BacktrackingSudokuTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/xref-test/BacktrackingSudokuTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/xref-test/SudokuBoardTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/xref-test/SudokuBoardTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/xref/BacktrackingSudokuSolver.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/xref/BacktrackingSudokuSolver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/xref/Main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/xref/SudokuBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/xref/SudokuBoard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/xref/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/xref/allclasses-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/xref/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/xref/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/site/xref/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/site/xref/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/surefire-reports/BacktrackingSudokuTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/surefire-reports/BacktrackingSudokuTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/surefire-reports/SudokuBoardTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/surefire-reports/SudokuBoardTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/surefire-reports/TEST-BacktrackingSudokuTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/surefire-reports/TEST-BacktrackingSudokuTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/surefire-reports/TEST-SudokuBoardTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/surefire-reports/TEST-SudokuBoardTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/test-classes/BacktrackingSudokuTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/test-classes/BacktrackingSudokuTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/test-classes/SudokuBoardTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku/target/test-classes/SudokuBoardTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku/target/untitled-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,14 +44,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/artur/IdeaProjects/repo/jm_pn_1200_07/Sudoku",
+    "last_opened_file_path": "C:/Users/Hp/Desktop/kompo/REPO/jm_pn_1200_07/Sudoku",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="untitled" />
@@ -164,6 +111,7 @@
       <workItem from="1666547734517" duration="1362000" />
       <workItem from="1666558784948" duration="7948000" />
       <workItem from="1666566922984" duration="119000" />
+      <workItem from="1666569281986" duration="35000" />
     </task>
     <servers />
   </component>

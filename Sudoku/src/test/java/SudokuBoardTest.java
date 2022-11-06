@@ -68,9 +68,10 @@ public class SudokuBoardTest {
         SudokuSolver solvik = new BacktrackingSudokuSolver();
         sudokuBoard = new SudokuBoard(solvik);
     }
-    //TESTY DLA RZEDOW
+
     SudokuBoard boardzik = new SudokuBoard(exampleBoardGood);
     SudokuBoard boardzik1 = new SudokuBoard(exampleBoardGood2);
+
     @Test
     public void checkValidTest(){
         assertTrue(sudokuBoard.checkValid(exampleBoardGood));
@@ -99,13 +100,6 @@ public class SudokuBoardTest {
             }
         }
     }
-
-
-    @Test
-    public void equalsTest() {
-        assertTrue(sudokuBoard.equals(sudokuBoard));
-    }
-    //TESTY DLA KOLUMN
 
     @Test
     public void toStringTest() {

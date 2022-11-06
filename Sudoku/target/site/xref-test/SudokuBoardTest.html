@@ -76,7 +76,7 @@
 <a class="jxr_linenumber" name="L68" href="#L68">68</a>          SudokuSolver solvik = <strong class="jxr_keyword">new</strong> BacktrackingSudokuSolver();
 <a class="jxr_linenumber" name="L69" href="#L69">69</a>          sudokuBoard = <strong class="jxr_keyword">new</strong> SudokuBoard(solvik);
 <a class="jxr_linenumber" name="L70" href="#L70">70</a>      }
-<a class="jxr_linenumber" name="L71" href="#L71">71</a>      <em class="jxr_comment">//TESTY DLA RZEDOW</em>
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>  
 <a class="jxr_linenumber" name="L72" href="#L72">72</a>      SudokuBoard boardzik = <strong class="jxr_keyword">new</strong> SudokuBoard(exampleBoardGood);
 <a class="jxr_linenumber" name="L73" href="#L73">73</a>      SudokuBoard boardzik1 = <strong class="jxr_keyword">new</strong> SudokuBoard(exampleBoardGood2);
 <a class="jxr_linenumber" name="L74" href="#L74">74</a>      @Test
@@ -108,24 +108,17 @@
 <a class="jxr_linenumber" name="L100" href="#L100">100</a>         }
 <a class="jxr_linenumber" name="L101" href="#L101">101</a>     }
 <a class="jxr_linenumber" name="L102" href="#L102">102</a> 
-<a class="jxr_linenumber" name="L103" href="#L103">103</a> 
-<a class="jxr_linenumber" name="L104" href="#L104">104</a>     @Test
-<a class="jxr_linenumber" name="L105" href="#L105">105</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> equalsTest() {
-<a class="jxr_linenumber" name="L106" href="#L106">106</a>         assertTrue(sudokuBoard.equals(sudokuBoard));
-<a class="jxr_linenumber" name="L107" href="#L107">107</a>     }
-<a class="jxr_linenumber" name="L108" href="#L108">108</a>     <em class="jxr_comment">//TESTY DLA KOLUMN</em>
-<a class="jxr_linenumber" name="L109" href="#L109">109</a> 
-<a class="jxr_linenumber" name="L110" href="#L110">110</a>     @Test
-<a class="jxr_linenumber" name="L111" href="#L111">111</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> toStringTest() {
-<a class="jxr_linenumber" name="L112" href="#L112">112</a>         String tmp = <span class="jxr_string">""</span>;
-<a class="jxr_linenumber" name="L113" href="#L113">113</a>         <strong class="jxr_keyword">for</strong>(<strong class="jxr_keyword">int</strong> i = 0; i &lt; 9; i++)
-<a class="jxr_linenumber" name="L114" href="#L114">114</a>         {
-<a class="jxr_linenumber" name="L115" href="#L115">115</a>             tmp += <span class="jxr_string">"0 0 0 0 0 0 0 0 0 \n"</span>;
-<a class="jxr_linenumber" name="L116" href="#L116">116</a>         }
-<a class="jxr_linenumber" name="L117" href="#L117">117</a>         assertTrue(sudokuBoard.toString().equals(tmp));
-<a class="jxr_linenumber" name="L118" href="#L118">118</a>     }
-<a class="jxr_linenumber" name="L119" href="#L119">119</a> 
-<a class="jxr_linenumber" name="L120" href="#L120">120</a> }
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>     @Test
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> toStringTest() {
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>         String tmp = <span class="jxr_string">""</span>;
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>         <strong class="jxr_keyword">for</strong>(<strong class="jxr_keyword">int</strong> i = 0; i &lt; 9; i++)
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>         {
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>             tmp += <span class="jxr_string">"0 0 0 0 0 0 0 0 0 \n"</span>;
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>         }
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>         assertTrue(sudokuBoard.toString().equals(tmp));
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>     }
+<a class="jxr_linenumber" name="L112" href="#L112">112</a> 
+<a class="jxr_linenumber" name="L113" href="#L113">113</a> }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2022. All rights reserved.</div>

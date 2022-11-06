@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.38.0" timestamp="2022-10-24T01:45:02.580">
-<file name="C:\Users\artur\IdeaProjects\repo\jm_pn_1200_07\Sudoku\src\main\java\BacktrackingSudokuSolver.java">
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.38.0" timestamp="2022-10-24T13:03:57.669">
+<file name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\src\main\java\BacktrackingSudokuSolver.java">
 <violation beginline="23" endline="23" begincolumn="45" endcolumn="74" rule="UselessParentheses" ruleset="Code Style" class="BacktrackingSudokuSolver" method="solve" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
@@ -11,7 +11,7 @@ Useless parentheses.
 Useless parentheses.
 </violation>
 </file>
-<file name="C:\Users\artur\IdeaProjects\repo\jm_pn_1200_07\Sudoku\src\main\java\SudokuBoard.java">
+<file name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\src\main\java\SudokuBoard.java">
 <violation beginline="52" endline="52" begincolumn="42" endcolumn="52" rule="UselessParentheses" ruleset="Code Style" class="SudokuBoard" method="checkValid" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
@@ -23,9 +23,6 @@ Useless parentheses.
 </violation>
 <violation beginline="53" endline="53" begincolumn="73" endcolumn="84" rule="UselessParentheses" ruleset="Code Style" class="SudokuBoard" method="checkValid" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
-</violation>
-<violation beginline="64" endline="64" begincolumn="20" endcolumn="46" rule="OverrideBothEqualsAndHashcode" ruleset="Error Prone" class="SudokuBoard" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_errorprone.html#overridebothequalsandhashcode" priority="3">
-Ensure you override both equals() and hashCode()
 </violation>
 </file>
 </pmd>
