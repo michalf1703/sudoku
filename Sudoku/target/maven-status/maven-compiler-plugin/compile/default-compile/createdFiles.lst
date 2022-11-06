@@ -1,3 +1,8 @@
+SudokuField.class
+SudokuRow.class
 SudokuSolver.class
+SudokuColumn.class
 BacktrackingSudokuSolver.class
+SudokuBox.class
+SudokuMethods.class
 SudokuBoard.class

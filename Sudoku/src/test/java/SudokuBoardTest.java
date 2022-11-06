@@ -69,10 +69,11 @@ public class SudokuBoardTest {
         sudokuBoard = new SudokuBoard(solvik);
     }
 
+
     SudokuBoard boardzik = new SudokuBoard(exampleBoardGood);
     SudokuBoard boardzik1 = new SudokuBoard(exampleBoardGood2);
 
-    @Test
+   @Test
     public void checkValidTest(){
         assertTrue(sudokuBoard.checkValid(exampleBoardGood));
         assertFalse(sudokuBoard.checkValid(exampleBoardWrongRow));
@@ -110,5 +111,20 @@ public class SudokuBoardTest {
         }
         assertTrue(sudokuBoard.toString().equals(tmp));
     }
+
+    @Test
+    public void getRowTest() {
+        assertNotNull(sudokuBoard.getRow(3));
+    }
+    @Test
+    public void getColumnTest() {
+        assertNotNull(sudokuBoard.getColumn(5));
+    }
+
+    @Test
+    public void getBoxTest() {
+        assertNotNull(sudokuBoard.getBox(1, 1));
+    }
+
 
 }

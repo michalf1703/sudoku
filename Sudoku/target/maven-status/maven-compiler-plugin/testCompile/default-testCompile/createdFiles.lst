@@ -1,2 +1,4 @@
-BacktrackingSudokuTest.class
+SudokuFieldTest.class
 SudokuBoardTest.class
+SudokuMethodsTest.class
+BacktrackingSudokuTest.class

@@ -4,6 +4,7 @@ public class SudokuField {
     public SudokuField() {
 
     }
+
     public SudokuField(int value) {
         this.value = value;
     }
@@ -12,10 +13,11 @@ public class SudokuField {
         return this.value;
     }
 
-    public void setFieldValue(int value) {
+    public boolean setFieldValue(int value) {
         if (value < 0 || value > 9) {
-            throw new WrongFieldValueException("the value must be in the range <1,9>");
+            return false;
         }
         this.value = value;
+        return true;
     }
 }

@@ -3,9 +3,6 @@ public abstract class SudokuMethods {
     protected SudokuField[] fields;
 
     public SudokuMethods(final SudokuField[] fields) {
-        if (fields.length != 9) {
-            throw new WrongSizeException("Length must be 9");
-        }
         this.fields = fields;
     }
 
