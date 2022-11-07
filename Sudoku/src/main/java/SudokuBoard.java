@@ -36,7 +36,7 @@ public class SudokuBoard {
         }
     }
 
-    public boolean checkValid(int[][] tab) {
+    public boolean checkBoard(int[][] tab) {
 
         //SPRAWDZANIE RZEDU
         for (int i = 0; i < 9; i++) {

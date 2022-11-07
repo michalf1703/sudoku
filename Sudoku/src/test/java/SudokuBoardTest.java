@@ -75,10 +75,10 @@ public class SudokuBoardTest {
 
    @Test
     public void checkValidTest(){
-        assertTrue(sudokuBoard.checkValid(exampleBoardGood));
-        assertFalse(sudokuBoard.checkValid(exampleBoardWrongRow));
-        assertFalse(sudokuBoard.checkValid(exampleBoardWrongColumn));
-        assertFalse(sudokuBoard.checkValid(exampleBoardWrongSquare));
+        assertTrue(sudokuBoard.checkBoard(exampleBoardGood));
+        assertFalse(sudokuBoard.checkBoard(exampleBoardWrongRow));
+        assertFalse(sudokuBoard.checkBoard(exampleBoardWrongColumn));
+        assertFalse(sudokuBoard.checkBoard(exampleBoardWrongSquare));
     }
 
 
