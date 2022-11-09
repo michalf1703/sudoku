@@ -1,8 +1,6 @@
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
-import java.util.Arrays;
-import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -72,9 +70,6 @@ public class SudokuBoardTest {
     }
 
 
-   // SudokuBoard boardzik = new SudokuBoard(exampleBoardGood);
-  // SudokuBoard boardzik1 = new SudokuBoard(exampleBoardGood2);
-
    @Test
     public void checkValidTest(){
         assertTrue(sudokuBoard.checkBoard(exampleBoardGood));
@@ -91,18 +86,6 @@ public class SudokuBoardTest {
         assertEquals(sudokuBoard.get(1, 2), 3);
     }
 
-  /*  @Test
-    public void ConstructorTest() {
-        boolean z = true;
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++){
-                if (boardzik.get(i,j) != boardzik1.get(i,j)) {
-                    z = false;
-                    break;
-                }
-            }
-        }
-    }*/
 
     @Test
     public void toStringTest() {

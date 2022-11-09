@@ -1,46 +1,49 @@
-import java.util.Random;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
+
 
 public class BacktrackingSudokuSolver implements SudokuSolver {
     public void solve(final SudokuBoard board) {
         Random rand = new Random();
-        int[] startTab = new int[81];  //wartości początkowe
+        List<Integer> startTab = Arrays.asList(new Integer[81]);
+        for (int i = 0; i < 81; i++) {
+            startTab.set(i, 0);
+        }
         for (int i = 0; i < 81; i++) {
             //WSPOLRZEDNE SIATKI
             int row = i / 9;
             int column = i % 9;
 
             boolean nextStep = false;
-            if (startTab[i] == 0) {
+            if (startTab.get(i) == 0) {
                 //JESLI KROK DO PRZODU TO USTALAMY NOWA WARTOSC POCZATKOWA
-                startTab[i] = rand.nextInt(9) + 1;
-                board.set(row, column, startTab[i]);
+                startTab.set(i, rand.nextInt(9) + 1);
+                board.set(row, column, startTab.get(i));
 
                 do {
                     if (checkValid(i, board)) {
                         nextStep = true;
                         break;
                     }
-                    board.set(row, column, (board.get(row, column) % 9 + 1));
-                } while (board.get(row, column) != startTab[i]);
+                    board.set(row, column, board.get(row, column) % 9 + 1);
+                } while (board.get(row, column) != startTab.get(i));
 
             } else {
                 //JESLI KROK DO TYLU TO WYKORZYSTUJEMY POPRZEDNIA WARTOSC
-                board.set(row, column, (board.get(row, column) % 9 + 1));
-                while (board.get(row, column) != startTab[i]) {
+                board.set(row, column, board.get(row, column) % 9 + 1);
+                while (board.get(row, column) != startTab.get(i)) {
                     if (checkValid(i, board)) {
                         nextStep = true;
                         break;
                     }
-                    board.set(row, column, (board.get(row, column) % 9 + 1));
+                    board.set(row, column, board.get(row, column) % 9 + 1);
                 }
             }
 
             //JEZELI NIE PASUJE TO SIE COFAMY
             if (!nextStep) {
-                startTab[i] = 0;
+                startTab.set(i,0);
                 board.set(row, column, 0);
                 i -= 2;
             }

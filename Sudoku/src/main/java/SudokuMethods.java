@@ -20,6 +20,7 @@ public abstract class SudokuMethods {
 
         return true;
     }
+
     public List<Integer> getFields() {
         List<Integer> valueList = new ArrayList<>();
         for (int i = 0; i < 9; i++) {

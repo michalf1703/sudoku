@@ -1,28 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.38.0" timestamp="2022-11-07T12:57:58.096">
-<file name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\src\main\java\BacktrackingSudokuSolver.java">
-<violation beginline="23" endline="23" begincolumn="45" endcolumn="74" rule="UselessParentheses" ruleset="Code Style" class="BacktrackingSudokuSolver" method="solve" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-<violation beginline="28" endline="28" begincolumn="41" endcolumn="70" rule="UselessParentheses" ruleset="Code Style" class="BacktrackingSudokuSolver" method="solve" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-<violation beginline="34" endline="34" begincolumn="45" endcolumn="74" rule="UselessParentheses" ruleset="Code Style" class="BacktrackingSudokuSolver" method="solve" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-</file>
-<file name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\src\main\java\SudokuBoard.java">
-<violation beginline="68" endline="68" begincolumn="54" endcolumn="64" rule="UselessParentheses" ruleset="Code Style" class="SudokuBoard" method="checkBoard" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-<violation beginline="68" endline="68" begincolumn="77" endcolumn="87" rule="UselessParentheses" ruleset="Code Style" class="SudokuBoard" method="checkBoard" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-<violation beginline="69" endline="69" begincolumn="53" endcolumn="64" rule="UselessParentheses" ruleset="Code Style" class="SudokuBoard" method="checkBoard" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-<violation beginline="69" endline="69" begincolumn="77" endcolumn="88" rule="UselessParentheses" ruleset="Code Style" class="SudokuBoard" method="checkBoard" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-</file>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.38.0" timestamp="2022-11-09T19:29:15.885">
 </pmd>

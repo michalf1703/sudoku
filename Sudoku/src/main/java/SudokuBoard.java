@@ -5,15 +5,12 @@ public class SudokuBoard {
 
 
     private SudokuSolver solver;
-    //private final SudokuField[][] board = new SudokuField[9][9];
 
-    private List<List<SudokuField>>board;
+    private List<List<SudokuField>> board;
 
     public SudokuBoard(SudokuSolver solverek1) {
         board = Arrays.asList(new List[9]);
-     //   induce();
-        for (int i = 0; i < 9; i++)
-        {
+        for (int i = 0; i < 9; i++) {
             board.set(i,Arrays.asList(new SudokuField[9]));
         }
         for (int i = 0; i < 9; i++) {
@@ -23,23 +20,7 @@ public class SudokuBoard {
         }
         solver = solverek1;
     }
-   /* private void induce() {
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                this.board.get(i).set(j,new SudokuField());
-            }
-        }
-    }*/
 
-  /*  public SudokuBoard(int[][] sudokuBoard) {
-        induce();
-        for (int i = 0; i < 9; i++) {
-            for (int k = 0; k < 9; k++) {
-                this.set(i,k,sudokuBoard[i][k]);
-            }
-        }
-    }
-*/
     public int get(int x, int y) {
         return board.get(x).get(y).getFieldValue();
     }
@@ -78,8 +59,8 @@ public class SudokuBoard {
                         for (int checked = 0; checked < 9; checked++) {
                             for (int compared = checked + 1; compared < 9; compared++) {
 
-                                    if (tab[i * 3 + (checked / 3)][j * 3 + (checked % 3)]
-                                    == tab[i * 3 + (compared / 3)][j * 3 + (compared % 3)]) {
+                                    if (tab[i * 3 + checked / 3][j * 3 + checked % 3]
+                                    == tab[i * 3 + compared / 3][j * 3 + compared % 3]) {
                                         return false;
                                     }
                                 }

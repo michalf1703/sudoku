@@ -70,8 +70,8 @@ public class BacktrackingSudokuTest {
 
         SudokuSolver solverek1 = new BacktrackingSudokuSolver();
         SudokuBoard object1 = new SudokuBoard(solverek1);
-        SudokuBoard object2 = new SudokuBoard(solverek1);
         object1.solveGame();
+        SudokuBoard object2 = new SudokuBoard(solverek1);
         object2.solveGame();
 
         assertTrue(!object1.equals(object2));
