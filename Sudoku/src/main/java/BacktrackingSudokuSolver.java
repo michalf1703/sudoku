@@ -1,4 +1,7 @@
 import java.util.Random;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class BacktrackingSudokuSolver implements SudokuSolver {
     public void solve(final SudokuBoard board) {

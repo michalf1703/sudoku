@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="SudokuBoardTest" time="0.041" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="SudokuBoardTest" time="0.061" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.4.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\Hp\AppData\Local\Temp\surefire11082318230621522199\surefirebooter17641301849960080877.jar C:\Users\Hp\AppData\Local\Temp\surefire11082318230621522199 2022-11-06T20-21-41_599-jvmRun1 surefire13260544223884377871tmp surefire_05689432650701525233tmp"/>
+    <property name="sun.java.command" value="C:\Users\Hp\AppData\Local\Temp\surefire35536646012547987\surefirebooter14274545169985652827.jar C:\Users\Hp\AppData\Local\Temp\surefire35536646012547987 2022-11-07T12-57-46_887-jvmRun1 surefire1626613838053144204tmp surefire_011621743232557289869tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\target\test-classes;C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\target\classes;C:\Users\Hp\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.2\junit-jupiter-engine-5.7.2.jar;C:\Users\Hp\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Hp\.m2\repository\org\junit\platform\junit-platform-engine\1.7.2\junit-platform-engine-1.7.2.jar;C:\Users\Hp\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Hp\.m2\repository\org\junit\platform\junit-platform-commons\1.7.2\junit-platform-commons-1.7.2.jar;C:\Users\Hp\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.2\junit-jupiter-api-5.7.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Hp\AppData\Local\Temp\surefire11082318230621522199\surefirebooter17641301849960080877.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Hp\AppData\Local\Temp\surefire35536646012547987\surefirebooter14274545169985652827.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.4.1+1-LTS-2"/>
@@ -56,11 +56,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="getRowTest" classname="SudokuBoardTest" time="0.005"/>
-  <testcase name="getAndSetTest" classname="SudokuBoardTest" time="0.003"/>
-  <testcase name="toStringTest" classname="SudokuBoardTest" time="0.016"/>
-  <testcase name="checkValidTest" classname="SudokuBoardTest" time="0.003"/>
-  <testcase name="getBoxTest" classname="SudokuBoardTest" time="0.002"/>
-  <testcase name="ConstructorTest" classname="SudokuBoardTest" time="0"/>
-  <testcase name="getColumnTest" classname="SudokuBoardTest" time="0.002"/>
+  <testcase name="getRowTest" classname="SudokuBoardTest" time="0.008"/>
+  <testcase name="getAndSetTest" classname="SudokuBoardTest" time="0.008"/>
+  <testcase name="toStringTest" classname="SudokuBoardTest" time="0.021"/>
+  <testcase name="checkValidTest" classname="SudokuBoardTest" time="0.004"/>
+  <testcase name="getBoxTest" classname="SudokuBoardTest" time="0.003"/>
+  <testcase name="ConstructorTest" classname="SudokuBoardTest" time="0.002"/>
+  <testcase name="getColumnTest" classname="SudokuBoardTest" time="0.003"/>
 </testsuite>
