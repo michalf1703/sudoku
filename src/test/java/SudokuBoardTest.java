@@ -1,11 +1,14 @@
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
+import java.util.List;
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 
 public class SudokuBoardTest {
     private SudokuBoard sudokuBoard;
+    private SudokuBoard sudokuBoardSecond;
     public int [][] exampleBoardGood = {
             {5,3,4,6,7,8,9,1,2},
             {6,7,2,1,9,5,3,4,8},
@@ -104,13 +107,29 @@ public class SudokuBoardTest {
 
     @Test
     public void toStringTest() {
-        String tmp = "";
-        for(int i = 0; i < 9; i++)
-        {
-            tmp += "0 0 0 0 0 0 0 0 0 \n";
-        }
-        assertTrue(sudokuBoard.toString().equals(tmp));
+        assertNotNull(sudokuBoard.toString());
     }
+    @Test
+    public void equalsTest() {
+        assertTrue(sudokuBoard.equals(sudokuBoard));
+    }
+    @Test
+    public void hashCodeTest() {
+        List<List<SudokuField>> board = Arrays.asList(new List[9]);
+
+        for (int i = 0; i < 9; i++) {
+            board.set(i, Arrays.asList(new SudokuField[9]));
+        }
+
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                board.get(i).set(j, new SudokuField());
+            }
+        }
+
+        assertTrue(sudokuBoard.hashCode() != board.hashCode());
+    }
+
 
     @Test
     public void getRowTest() {

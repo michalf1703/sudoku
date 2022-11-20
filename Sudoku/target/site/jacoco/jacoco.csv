@@ -1,8 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-untitled,default,SudokuMethods,0,37,0,6,0,8,0,5,0,2
-untitled,default,SudokuField,0,24,0,4,0,10,0,6,0,4
-untitled,default,SudokuBoard,0,352,0,46,0,57,0,34,0,11
-untitled,default,SudokuBox,0,4,0,0,0,2,0,1,0,1
-untitled,default,SudokuColumn,0,4,0,0,0,2,0,1,0,1
-untitled,default,BacktrackingSudokuSolver,0,223,0,30,0,44,0,18,0,3
-untitled,default,SudokuRow,0,4,0,0,0,2,0,1,0,1

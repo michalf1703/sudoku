@@ -1,4 +1,7 @@
 import java.util.List;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class SudokuBoard {
 
@@ -60,13 +63,10 @@ public class SudokuBoard {
                 }
             }
         }
-        //SPRAWDZANIE MALYCH KWADRATOW
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                //mały kwadrat (i, j)
                 for (int checked = 0; checked < 9; checked++) {
                     for (int compared = checked + 1; compared < 9; compared++) {
-
                         if (tab[i * 3 + checked / 3][j * 3 + checked % 3]
                                 == tab[i * 3 + compared / 3][j * 3 + compared % 3]) {
                             return false;
@@ -78,17 +78,6 @@ public class SudokuBoard {
         return true;
     }
 
-
-    public String toString() {
-        String result = "";
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                result += get(i, j) + " ";
-            }
-            result += "\n";
-        }
-        return result;
-    }
 
     public void solveGame() {
         solver.solve(this);
@@ -118,6 +107,23 @@ public class SudokuBoard {
         }
 
         return new SudokuBox(List.of(fields));
+    }
+
+
+    @Override
+    public boolean equals(final Object obj) {
+        return new EqualsBuilder().append(board, ((SudokuBoard) obj).board).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+                .append(board).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this).append("board", board).toString();
     }
 }
 

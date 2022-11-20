@@ -10,7 +10,7 @@ public class SudokuMethodsTest {
 
     @Test
     public void verifyValidTest() {
-        SudokuRow sudokuRow = new SudokuRow(Arrays.asList(
+        SudokuMethods sudokuRow = new SudokuMethods(Arrays.asList(
                 new SudokuField(1),
                 new SudokuField(2),
                 new SudokuField(3),
@@ -19,13 +19,14 @@ public class SudokuMethodsTest {
                 new SudokuField(6),
                 new SudokuField(7),
                 new SudokuField(8),
-                new SudokuField(9)));
+                new SudokuField(9))) {
+        };
         assertTrue(sudokuRow.verify());
     }
 
     @Test
     public void verifyInvalidTest() {
-        SudokuRow sudokuRow = new SudokuRow(Arrays.asList(
+        SudokuMethods sudokuRow = new SudokuMethods(Arrays.asList(
                 new SudokuField(1),
                 new SudokuField(2),
                 new SudokuField(3),
@@ -34,13 +35,14 @@ public class SudokuMethodsTest {
                 new SudokuField(6),
                 new SudokuField(7),
                 new SudokuField(8),
-                new SudokuField(9)));
+                new SudokuField(9))) {
+        };
         assertFalse(sudokuRow.verify());
     }
 
     @Test
     public void getFieldsTest() {
-        SudokuRow sudokuRow = new SudokuRow(Arrays.asList(
+        SudokuMethods sudokuRow = new SudokuMethods(Arrays.asList(
                 new SudokuField(1),
                 new SudokuField(2),
                 new SudokuField(3),
@@ -49,7 +51,8 @@ public class SudokuMethodsTest {
                 new SudokuField(6),
                 new SudokuField(7),
                 new SudokuField(8),
-                new SudokuField(9)));
+                new SudokuField(9))) {
+        };
 
         List<Integer> sudokuRowList = sudokuRow.getFields();
 
@@ -59,6 +62,78 @@ public class SudokuMethodsTest {
         }
 
         assertEquals(sudokuRowList,valueList);
+    }
+
+    @Test
+    public void toStringTest() {
+        SudokuMethods sudokuRow = new SudokuMethods(Arrays.asList(
+                new SudokuField(1),
+                new SudokuField(2),
+                new SudokuField(3),
+                new SudokuField(4),
+                new SudokuField(5),
+                new SudokuField(6),
+                new SudokuField(7),
+                new SudokuField(8),
+                new SudokuField(9))) {
+        };
+        assertNotNull(sudokuRow.toString());
+    }
+
+    @Test
+    public void equalsTest() {
+        SudokuMethods sudokuRow = new SudokuMethods(Arrays.asList(
+                new SudokuField(1),
+                new SudokuField(2),
+                new SudokuField(3),
+                new SudokuField(4),
+                new SudokuField(5),
+                new SudokuField(6),
+                new SudokuField(7),
+                new SudokuField(8),
+                new SudokuField(9))) {
+        };
+        SudokuMethods sudokuRowSecond = new SudokuMethods(Arrays.asList(
+                new SudokuField(1),
+                new SudokuField(2),
+                new SudokuField(3),
+                new SudokuField(4),
+                new SudokuField(5),
+                new SudokuField(6),
+                new SudokuField(7),
+                new SudokuField(8),
+                new SudokuField(9))) {
+        };
+
+        assertTrue(sudokuRow.equals(sudokuRowSecond) && sudokuRowSecond.equals(sudokuRow));
+    }
+
+    @Test
+    public void hashCodeTest() {
+        SudokuMethods sudokuRow = new SudokuMethods(Arrays.asList(
+                new SudokuField(1),
+                new SudokuField(2),
+                new SudokuField(3),
+                new SudokuField(4),
+                new SudokuField(5),
+                new SudokuField(6),
+                new SudokuField(7),
+                new SudokuField(8),
+                new SudokuField(9))) {
+        };
+        SudokuMethods sudokuRowSecond = new SudokuMethods(Arrays.asList(
+                new SudokuField(1),
+                new SudokuField(2),
+                new SudokuField(3),
+                new SudokuField(4),
+                new SudokuField(5),
+                new SudokuField(6),
+                new SudokuField(7),
+                new SudokuField(8),
+                new SudokuField(9))) {
+        };
+
+        assertEquals(sudokuRow.hashCode(), sudokuRowSecond.hashCode());
     }
 
 }

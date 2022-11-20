@@ -20,7 +20,6 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
                 //JESLI KROK DO PRZODU TO USTALAMY NOWA WARTOSC POCZATKOWA
                 startTab.set(i, rand.nextInt(9) + 1);
                 board.set(row, column, startTab.get(i));
-
                 do {
                     if (checkValid(i, board)) {
                         nextStep = true;
@@ -28,7 +27,6 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
                     }
                     board.set(row, column, board.get(row, column) % 9 + 1);
                 } while (board.get(row, column) != startTab.get(i));
-
             } else {
                 //JESLI KROK DO TYLU TO WYKORZYSTUJEMY POPRZEDNIA WARTOSC
                 board.set(row, column, board.get(row, column) % 9 + 1);
@@ -40,7 +38,6 @@ public class BacktrackingSudokuSolver implements SudokuSolver {
                     board.set(row, column, board.get(row, column) % 9 + 1);
                 }
             }
-
             //JEZELI NIE PASUJE TO SIE COFAMY
             if (!nextStep) {
                 startTab.set(i,0);
