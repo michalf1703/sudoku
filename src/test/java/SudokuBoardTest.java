@@ -112,6 +112,23 @@ public class SudokuBoardTest {
     @Test
     public void equalsTest() {
         assertTrue(sudokuBoard.equals(sudokuBoard));
+
+        BacktrackingSudokuSolver backtrackingSudokuSolver = new BacktrackingSudokuSolver();
+        SudokuBoard board1 = new SudokuBoard(backtrackingSudokuSolver);
+        board1.solveGame();
+
+        BacktrackingSudokuSolver backtrackingSudokuSolver1 = new BacktrackingSudokuSolver();
+        SudokuBoard board2 = new SudokuBoard(backtrackingSudokuSolver1);
+        board1.solveGame();
+
+        //reflexive: an object must equal itself
+        assertTrue(board1.equals(board1));
+
+
+        //porownanie dwoch roznych boardow
+        assertFalse(board1.equals(board2));
+
+        assertTrue(board1.equals(board1));
     }
     @Test
     public void hashCodeTest() {

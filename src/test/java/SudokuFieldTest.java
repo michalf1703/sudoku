@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 public class SudokuFieldTest {
     private SudokuField sudokuField;
     private SudokuField sudokuFieldSecond;
@@ -44,12 +45,57 @@ public class SudokuFieldTest {
         sudokuFieldSecond = new SudokuField();
         assertTrue(sudokuField.equals(sudokuFieldSecond)
                 && sudokuFieldSecond.equals(sudokuField));
+        SudokuField field1 = new SudokuField();
+        SudokuField field2 = new SudokuField();
+        SudokuField field4 = new SudokuField();
+        SudokuField field5 = new SudokuField();
+        SudokuField field3;
+
+        BacktrackingSudokuSolver back = new BacktrackingSudokuSolver();
+        SudokuBoard board1 = new SudokuBoard(back);
+        field3 = field1;
+        field1.setFieldValue(1);
+        field2.setFieldValue(7);
+        field4.setFieldValue(1);
+        field5.setFieldValue(1);
+
+        //obiekty sobie równe
+        assertTrue(field1.equals(field1));
+        // różne obiekty
+        assertFalse(field1.equals(field2));
+        //jeśli x.equals(y) i y.equals(z), to także x.equals(z)
+        assertTrue(field1.equals(field4));
+        assertTrue(field4.equals(field5));
+        assertTrue(field1.equals(field5));
+
+        //zmiana wartosci
+        field1.setFieldValue(7);
+        assertFalse(field1.equals(field4));
+
     }
 
     @Test
     public void hashCodeTest() {
         sudokuFieldSecond = new SudokuField();
         assertEquals(sudokuField.hashCode(), sudokuFieldSecond.hashCode());
+
+        SudokuField field1 = new SudokuField();
+        SudokuField field2 = new SudokuField();
+        SudokuField field4 = new SudokuField();
+        SudokuField field3;
+
+        field3 = field1;
+        field1.setFieldValue(1);
+        field2.setFieldValue(7);
+        field4.setFieldValue(1);
+
+        //spójność:obiekty, które są sobie równe, muszą zwracać ten sam kod hashCode
+        assertEquals(field1.hashCode(),field4.hashCode());
+        assertTrue(field1.equals(field4));
+
+        //spójność : wartość hashCode() może się zmienić tylko wtedy, gdy zmieni się właściwość, która jest w equals().
+        field1.setFieldValue(2);
+        assertNotEquals(field1.hashCode(),field4.hashCode());
     }
 
     @Test
