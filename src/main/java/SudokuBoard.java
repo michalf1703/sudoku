@@ -109,22 +109,31 @@ public class SudokuBoard {
         return new SudokuBox(List.of(fields));
     }
 
-
     @Override
-    public boolean equals(final Object obj) {
-        return new EqualsBuilder().append(board, ((SudokuBoard) obj).board).isEquals();
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        SudokuBoard that = (SudokuBoard) o;
+
+        return new EqualsBuilder().append(board, that.board).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-                .append(board).toHashCode();
+        return new HashCodeBuilder(17, 37).append(board).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this).append("board", board).toString();
     }
+
 }
 
 

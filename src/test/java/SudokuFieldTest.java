@@ -11,6 +11,8 @@ public class SudokuFieldTest {
     private SudokuField sudokuField;
     private SudokuField sudokuFieldSecond;
 
+    private SudokuSolver solver = new BacktrackingSudokuSolver();
+
     @BeforeEach
     public void setUp() {
         sudokuField = new SudokuField();
@@ -71,6 +73,9 @@ public class SudokuFieldTest {
         //zmiana wartosci
         field1.setFieldValue(7);
         assertFalse(field1.equals(field4));
+
+        assertFalse(field1.equals(null));
+        assertFalse(field1.equals(solver));
 
     }
 

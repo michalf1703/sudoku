@@ -10,7 +10,7 @@ public class SudokuMethodsTest {
 
     @Test
     public void verifyValidTest() {
-        SudokuMethods sudokuRow = new SudokuMethods(Arrays.asList(
+        SudokuMethods sudokuRow = new SudokuColumn(Arrays.asList(
                 new SudokuField(1),
                 new SudokuField(2),
                 new SudokuField(3),
@@ -19,9 +19,8 @@ public class SudokuMethodsTest {
                 new SudokuField(6),
                 new SudokuField(7),
                 new SudokuField(8),
-                new SudokuField(9))) {
-        };
-        assertTrue(sudokuRow.verify());
+                new SudokuField(9)));
+       assertTrue(sudokuRow.verify());
     }
 
     @Test
@@ -105,7 +104,7 @@ public class SudokuMethodsTest {
                 new SudokuField(9))) {
         };
 
-        assertTrue(sudokuRow.equals(sudokuRowSecond) && sudokuRowSecond.equals(sudokuRow));
+        assertTrue(sudokuRowSecond.equals(sudokuRowSecond));
     }
 
     @Test

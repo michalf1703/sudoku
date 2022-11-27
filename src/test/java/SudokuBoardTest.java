@@ -121,14 +121,15 @@ public class SudokuBoardTest {
         SudokuBoard board2 = new SudokuBoard(backtrackingSudokuSolver1);
         board1.solveGame();
 
-        //reflexive: an object must equal itself
         assertTrue(board1.equals(board1));
-
 
         //porownanie dwoch roznych boardow
         assertFalse(board1.equals(board2));
 
         assertTrue(board1.equals(board1));
+
+        assertFalse(board1.equals(null));
+        assertFalse(board1.equals(backtrackingSudokuSolver));
     }
     @Test
     public void hashCodeTest() {

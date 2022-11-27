@@ -26,13 +26,23 @@ public class SudokuField {
     }
 
     @Override
-    public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(value).toHashCode();
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        SudokuField that = (SudokuField) o;
+
+        return new EqualsBuilder().append(value, that.value).isEquals();
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return new EqualsBuilder().append(value, ((SudokuField) obj).value).isEquals();
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(value).toHashCode();
     }
 
     @Override
