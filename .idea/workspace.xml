@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5068f16e-ddcb-49b7-8f06-1c0b433a641b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/FileSudokuBoardDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SudokuBoardDaoFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SudokuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SudokuField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SudokuBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SudokuFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SudokuFieldTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SudokuMethodsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SudokuMethodsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,21 +42,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hp/IdeaProjects/gulon/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.web.jar&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3264368&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Hp/Desktop/kompo/REPO/jm_pn_1200_07/Sudoku/Model",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3264368",
+    "settings.editor.selected.configurable": "preferences.JavaFX"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.All in Sudoku">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\Model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.FileSudokuBoardDaoTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="untitled" />
@@ -78,6 +81,15 @@
       <module name="untitled" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileSudokuBoardDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sudoku" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FileSudokuBoardDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,6 +119,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
         <item itemvalue="JUnit.All in Sudoku" />
         <item itemvalue="JUnit.SudokuBoardTest.checkValidTest" />
         <item itemvalue="Application.Main" />
@@ -139,6 +152,8 @@
       <workItem from="1668995525293" duration="1736000" />
       <workItem from="1669028648704" duration="5183000" />
       <workItem from="1669321487418" duration="1046000" />
+      <workItem from="1669574030363" duration="894000" />
+      <workItem from="1669575165249" duration="5341000" />
     </task>
     <servers />
   </component>
