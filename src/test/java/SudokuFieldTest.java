@@ -54,7 +54,7 @@ public class SudokuFieldTest {
         SudokuField field3;
 
         BacktrackingSudokuSolver back = new BacktrackingSudokuSolver();
-        SudokuBoard board1 = new SudokuBoard(back);
+//        SudokuBoard board1 = new SudokuBoard(back);
         field3 = field1;
         field1.setFieldValue(1);
         field2.setFieldValue(7);
@@ -113,5 +113,31 @@ public class SudokuFieldTest {
         hash2 = sb2.hashCode();
         assertEquals(sb,sb2);
         assertTrue(sb.equals(sb2));
+    }
+
+    @Test
+    public void compareToTest() {
+        sudokuFieldSecond = new SudokuField();
+
+        sudokuField.setFieldValue(4);
+        sudokuFieldSecond.setFieldValue(4);
+        assertEquals(sudokuField.compareTo(sudokuFieldSecond), 0);
+
+        sudokuField.setFieldValue(8);
+        sudokuFieldSecond.setFieldValue(4);
+        assertEquals(sudokuField.compareTo(sudokuFieldSecond), 1);
+
+        sudokuField.setFieldValue(4);
+        sudokuFieldSecond.setFieldValue(8);
+        assertEquals(sudokuField.compareTo(sudokuFieldSecond), -1);
+    }
+
+    @Test
+    public void cloneTest() throws CloneNotSupportedException {
+        sudokuField = new SudokuField(8);
+        sudokuFieldSecond = (SudokuField) sudokuField.clone();
+
+        assertTrue(sudokuField.equals(sudokuFieldSecond)
+                && sudokuFieldSecond.equals(sudokuField));
     }
 }

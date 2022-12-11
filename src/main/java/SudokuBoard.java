@@ -12,26 +12,28 @@ public class SudokuBoard implements Serializable {
     private final SudokuField[][] board = new SudokuField[9][9];
 
     public SudokuBoard(SudokuSolver solverek1) {
-        generate();
-        solver = solverek1;
-    }
-
-    private void generate() {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 this.board[i][j] = new SudokuField();
             }
         }
+        solver = solverek1;
     }
 
+
     public SudokuBoard(int[][] sudokuBoard) {
-        generate();
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                this.board[i][j] = new SudokuField();
+            }
+        }
         for (int i = 0; i < 9; i++) {
             for (int k = 0; k < 9; k++) {
                 this.set(i, k, sudokuBoard[i][k]);
             }
         }
     }
+
 
 
     public int get(int x, int y) {
@@ -110,6 +112,7 @@ public class SudokuBoard implements Serializable {
         return new SudokuBox(List.of(fields));
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -135,6 +138,21 @@ public class SudokuBoard implements Serializable {
         return new ToStringBuilder(this).append("board", board).toString();
     }
 
+    @Override
+    protected final SudokuBoard clone() throws CloneNotSupportedException {
+        SudokuBoard bordzik = new SudokuBoard(solver);
+
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                bordzik.set(i, j, this.get(i, j));
+            }
+        }
+
+        return bordzik;
+    }
+
 }
+
+
 
 

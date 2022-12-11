@@ -8,7 +8,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class SudokuBoardTest {
     private SudokuBoard sudokuBoard;
+
     private SudokuBoard sudokuBoardSecond;
+    private SudokuColumn sudokuColumn;
+    private SudokuColumn sudokuColumnSecond;
+    private SudokuBox sudokuBox;
+    private SudokuBox sudokuBoxSecond;
+    private SudokuRow sudokuRow;
+    private SudokuRow sudokuRowSecond;
+
     public int [][] exampleBoardGood = {
             {5,3,4,6,7,8,9,1,2},
             {6,7,2,1,9,5,3,4,8},
@@ -65,13 +73,50 @@ public class SudokuBoardTest {
             {2,8,7,4,1,9,6,3,5},
             {3,4,5,2,8,6,1,7,9}
     };
+    private SudokuBox makeObjectWithValidList1() {
+        return new SudokuBox(Arrays.asList(
+                new SudokuField(1),
+                new SudokuField(2),
+                new SudokuField(3),
+                new SudokuField(4),
+                new SudokuField(5),
+                new SudokuField(6),
+                new SudokuField(7),
+                new SudokuField(8),
+                new SudokuField(9)));
+    }
+
+    private SudokuColumn makeObjectWithValidList() {
+        return new SudokuColumn(Arrays.asList(
+                new SudokuField(1),
+                new SudokuField(2),
+                new SudokuField(3),
+                new SudokuField(4),
+                new SudokuField(5),
+                new SudokuField(6),
+                new SudokuField(7),
+                new SudokuField(8),
+                new SudokuField(9)));
+    }
+    private SudokuRow makeObjectWithValidList2() {
+        return new SudokuRow(Arrays.asList(
+                new SudokuField(1),
+                new SudokuField(2),
+                new SudokuField(3),
+                new SudokuField(4),
+                new SudokuField(5),
+                new SudokuField(6),
+                new SudokuField(7),
+                new SudokuField(8),
+                new SudokuField(9)));
+    }
 
     SudokuBoard boardzik = new SudokuBoard(exampleBoardGood);
     SudokuBoard boardzik1 = new SudokuBoard(exampleBoardGood2);
     @BeforeEach
     public void setUp() {
         SudokuSolver solvik = new BacktrackingSudokuSolver();
-        sudokuBoard = new SudokuBoard(solvik);
+       sudokuBoard = new SudokuBoard(solvik);
     }
 
 
@@ -162,6 +207,41 @@ public class SudokuBoardTest {
     public void getBoxTest() {
         assertNotNull(sudokuBoard.getBox(1, 1));
     }
+    @Test
+    public void CloneTestColumn() throws CloneNotSupportedException {
+        sudokuColumn = makeObjectWithValidList();
+        sudokuColumnSecond = (SudokuColumn) sudokuColumn.clone();
 
+        assertTrue(sudokuColumn.equals(sudokuColumnSecond)
+                && sudokuColumnSecond.equals(sudokuColumn));
+    }
+
+    @Test
+    public void CloneTestBox() throws CloneNotSupportedException {
+        sudokuBox = makeObjectWithValidList1();
+        sudokuBoxSecond = (SudokuBox) sudokuBox.clone();
+
+        assertTrue(sudokuBox.equals(sudokuBoxSecond)
+                && sudokuBoxSecond.equals(sudokuBox));
+    }
+
+    @Test
+    public void CloneTestRow() throws CloneNotSupportedException {
+        sudokuRow = makeObjectWithValidList2();
+        sudokuRowSecond = (SudokuRow) sudokuRow.clone();
+
+        assertTrue(sudokuRow.equals(sudokuRowSecond)
+                && sudokuRowSecond.equals(sudokuRow));
+    }
+
+    @Test
+    public void cloneTest() throws CloneNotSupportedException {
+        BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
+        solver.solve(sudokuBoard);
+        sudokuBoardSecond = (SudokuBoard) sudokuBoard.clone();
+
+        assertTrue(sudokuBoard.equals(sudokuBoardSecond)
+                && sudokuBoardSecond.equals(sudokuBoard));
+    }
 
 }

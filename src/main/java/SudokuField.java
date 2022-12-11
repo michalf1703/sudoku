@@ -4,7 +4,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 
-public class SudokuField implements Serializable {
+public class SudokuField implements Serializable,Cloneable, Comparable<SudokuField> {
     private int value;
 
     public SudokuField() {
@@ -50,5 +50,23 @@ public class SudokuField implements Serializable {
     @Override
     public String toString() {
         return new ToStringBuilder(this).append("value", value).toString();
+    }
+
+    @Override
+    public int compareTo(SudokuField o) {
+        if (this.getFieldValue() == o.getFieldValue()) {
+            return 0;
+        } else if (this.getFieldValue() > o.getFieldValue()) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
+
+    @Override
+    protected Object clone()  {
+        SudokuField sudokuField = new SudokuField();
+        sudokuField.value = this.value;
+        return sudokuField;
     }
 }

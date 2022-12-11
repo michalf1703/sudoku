@@ -1,11 +1,13 @@
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 
-public abstract class SudokuMethods {
+public abstract class SudokuMethods implements Cloneable, Serializable {
     public static final int SIZE = 9;
     private List<SudokuField> fields;
 
@@ -23,6 +25,10 @@ public abstract class SudokuMethods {
         }
 
         return true;
+    }
+
+    public List<SudokuField> getSudokuMethodsList() {
+        return Collections.unmodifiableList(fields);
     }
 
     public List<Integer> getFields() {

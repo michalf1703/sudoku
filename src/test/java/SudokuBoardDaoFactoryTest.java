@@ -9,6 +9,6 @@ public class SudokuBoardDaoFactoryTest {
 
     @Test
     public void getFileDaoTest() {
-        assertNotNull(factory.getFileDao("abc"));
+        assertNotNull(factory.getFileDao("xyz"));
     }
 }
