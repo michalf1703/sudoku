@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Model/ModelProject.iml" filepath="$PROJECT_DIR$/Model/ModelProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Sudoku.iml" filepath="$PROJECT_DIR$/.idea/Sudoku.iml" />
+      <module fileurl="file://$PROJECT_DIR$/View/ViewProject.iml" filepath="$PROJECT_DIR$/View/ViewProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/untitled.iml" filepath="$PROJECT_DIR$/untitled.iml" />
     </modules>
   </component>

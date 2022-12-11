@@ -27,7 +27,7 @@ public class FileSudokuBoardDaoTest {
         fileSudokuBoardDao = factory.getFileDao("uwu");
         fileSudokuBoardDao.read();
         });
-        Assertions.assertEquals("java.io.FileNotFoundException: uwu.txt (Nie można odnaleźć określonego pliku)",exception.getMessage());
+        Assertions.assertEquals("java.io.FileNotFoundException: uwu.txt (The system cannot find the file specified)",exception.getMessage());
 
     }
 
