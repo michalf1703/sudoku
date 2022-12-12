@@ -8,7 +8,7 @@ public class SudokuRow extends SudokuMethods {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() {
         List<SudokuField> fields = new ArrayList<>(getSudokuMethodsList());
         return new SudokuRow(fields);
     }

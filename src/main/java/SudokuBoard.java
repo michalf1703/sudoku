@@ -4,7 +4,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class SudokuBoard implements Serializable {
+public class SudokuBoard implements Serializable, Cloneable {
 
 
     private SudokuSolver solver;
@@ -139,7 +139,7 @@ public class SudokuBoard implements Serializable {
     }
 
     @Override
-    protected final SudokuBoard clone() throws CloneNotSupportedException {
+    public SudokuBoard clone() {
         SudokuBoard bordzik = new SudokuBoard(solver);
 
         for (int i = 0; i < 9; i++) {
