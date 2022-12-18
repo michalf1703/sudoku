@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="261.0"
+      prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ChoiceWindowControl">
+    <children>
+        <!-- LEFT SIDE -->
+        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="261.0" prefWidth="204.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="127.0" prefWidth="198.0">
+                    <children>
+                        <ComboBox fx:id="comboBoxSystemLang" layoutX="26.0" layoutY="2.0" prefWidth="150.0"
+                                  promptText="Choose language">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="English"/>
+                                    <String fx:value="Polish"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <Button fx:id="buttonConfirmLang" layoutX="46.0" layoutY="88.0" mnemonicParsing="false"
+                                onAction="#onActionButtonConfirmLang" text="Confirm language"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <Label layoutX="38.0" layoutY="14.0" text="Load previous game">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                        <Button fx:id="buttonDatabase" layoutX="14.0" layoutY="51.0" mnemonicParsing="false"
+                                onAction="#onActionButtonDatabase" prefWidth="75.0" text="Database"/>
+                        <Button fx:id="buttonFile" layoutX="113.0" layoutY="51.0" mnemonicParsing="false"
+                                onAction="#onActionButtonFile" prefHeight="25.0" prefWidth="75.0" text="File"/>
+                        <Button fx:id="buttonAuthors" layoutX="75.0" layoutY="87.0" mnemonicParsing="false"
+                                onAction="#onActionButtonAuthors" text="Authors"/>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <!-- CENTER SIDE -->
+        <Label layoutX="225.0" layoutY="23.0" text="Choose the level of difficulty">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <ComboBox fx:id="comboBoxSystemDifficult" layoutX="238.0" layoutY="59.0" prefWidth="150.0" promptText="Choice">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="UltraEasy"/>
+                    <String fx:value="Easy"/>
+                    <String fx:value="Medium"/>
+                    <String fx:value="Hard"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Button fx:id="buttonConfirmLevel" layoutX="262.0" layoutY="199.0" mnemonicParsing="false"
+                onAction="#onActionButtonConfirmLevel" text="Confirm level">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Button>
+        <!-- RIGHT SIDE -->
+        <Button fx:id="buttonStartGame" layoutX="464.0" layoutY="72.0" mnemonicParsing="false"
+                onAction="#onActionButtonStartGame" prefHeight="117.0" prefWidth="136.0" text="Start Game">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Button>
+    </children>
+</Pane>

@@ -5,40 +5,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5068f16e-ddcb-49b7-8f06-1c0b433a641b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Model/ModelProject.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/BacktrackingSudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BacktrackingSudokuSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/FileSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileSudokuBoardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SudokuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/SudokuBoardDaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SudokuBoardDaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/SudokuBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SudokuBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/SudokuColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SudokuColumn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SudokuField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/SudokuMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SudokuMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/SudokuRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SudokuRow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/SudokuSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SudokuSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/test/java/BacktrackingSudokuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BacktrackingSudokuTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/test/java/FileSudokuBoardDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FileSudokuBoardDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardDaoFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SudokuBoardDaoFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SudokuBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SudokuFieldTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuMethodsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SudokuMethodsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/xxx.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/ViewProject.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/pom.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/ModelProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/DaoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongFieldException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongFileException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongMethodsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongSomething_eng.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongSomething_pl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sudoku.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/ViewProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/BoardWindowControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/ChoiceWindowControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/EmptyBoardException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/FieldCoordinates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/Levels.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/PopOutWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/StageSetup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/java/UnknownLevelException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/resources/Language_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/resources/boardWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/resources/choiceWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/src/main/resources/logging.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BacktrackingSudokuSolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FileSudokuBoardDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SceneController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SudokuBoard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SudokuBoardDaoFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SudokuBoardRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SudokuBox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SudokuColumn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SudokuFX.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SudokuField.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SudokuMethods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SudokuRow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SudokuSolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BacktrackingSudokuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/BacktrackingSudokuTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FileSudokuBoardDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/FileSudokuBoardDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SudokuBoardDaoFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardDaoFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SudokuFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuFieldTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SudokuMethodsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuMethodsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/untitled.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
+        <option value="module-info" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -67,26 +101,55 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/artur/IdeaProjects/repo/jm_pn_1200_07&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hp/Desktop/projekcik/Włodarczyk Zawisza - gotowy projekt/Kompo&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.3264368&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\artur\IdeaProjects\repo\jm_pn_1200_07" />
+      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\View" />
+      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku" />
       <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\Model" />
+      <recent name="C:\Users\artur\IdeaProjects\repo\jm_pn_1200_07" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\artur\IdeaProjects\repo\jm_pn_1200_07\Model" />
-      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\Model" />
-      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\View" />
+      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\View\src\main\resources" />
+      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\Model\src\main\java" />
+      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\View\src\main\java" />
+      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\View\src\main\java\sudoku" />
+      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\View\src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in ModelProject">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="ViewProject" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Hp\IdeaProjects\gulon\openjfx-19_windows-x64_bin-sdk\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SudokuFX (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SudokuFX" />
+      <module name="ModelProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SudokuFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SudokuFX" />
+      <module name="Sudoku" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in ModelProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ModelProject" />
       <option name="PACKAGE_NAME" value="" />
@@ -95,49 +158,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in Sudoku" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sudoku" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileSudokuBoardDaoTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BacktrackingSudokuTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ModelProject" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FileSudokuBoardDaoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kompo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kompo" />
+      <option name="MAIN_CLASS_NAME" value="kompo.BacktrackingSudokuTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuBoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sudoku" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuBoardTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SudokuBoardTest.getRowTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sudoku" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SudokuBoardTest" />
-      <option name="METHOD_NAME" value="getRowTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.SudokuFX" />
+      <item itemvalue="Application.SudokuFX (1)" />
+      <item itemvalue="JUnit.All in ModelProject" />
+      <item itemvalue="JUnit.BacktrackingSudokuTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.All in ModelProject" />
-        <item itemvalue="JUnit.FileSudokuBoardDaoTest (1)" />
-        <item itemvalue="JUnit.All in Sudoku" />
-        <item itemvalue="JUnit.SudokuBoardTest" />
-        <item itemvalue="JUnit.SudokuBoardTest.getRowTest" />
+        <item itemvalue="JUnit.BacktrackingSudokuTest" />
+        <item itemvalue="Application.SudokuFX (1)" />
+        <item itemvalue="Application.SudokuFX" />
       </list>
     </recent_temporary>
   </component>
@@ -173,6 +222,19 @@
       <workItem from="1670764672675" duration="16910000" />
       <workItem from="1670795438571" duration="706000" />
       <workItem from="1670811261716" duration="182000" />
+      <workItem from="1670813515314" duration="236000" />
+      <workItem from="1670843000145" duration="65000" />
+      <workItem from="1670843072141" duration="4050000" />
+      <workItem from="1671238485639" duration="941000" />
+      <workItem from="1671240061043" duration="579000" />
+      <workItem from="1671240656719" duration="28000" />
+      <workItem from="1671241270837" duration="4271000" />
+      <workItem from="1671245632765" duration="3171000" />
+      <workItem from="1671286227942" duration="2617000" />
+      <workItem from="1671289265648" duration="602000" />
+      <workItem from="1671289889345" duration="3215000" />
+      <workItem from="1671367185147" duration="12820000" />
+      <workItem from="1671380086353" duration="4085000" />
     </task>
     <servers />
   </component>
