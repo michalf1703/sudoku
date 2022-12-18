@@ -46,14 +46,14 @@ public class SudokuBoard implements Serializable, Cloneable {
         this.board[x][y].setFieldValue(value);
     }
 
-   /* public boolean isEditableField(int axisX, int axisY) {
+   public boolean isEditableField(int axisX, int axisY) {
         return board[axisX][axisY].isEmptyField();
     }
 
     public void setEditableField(int axisX, int axisY) {
         this.board[axisX][axisY].isEmptyField();
     }
-*/
+
     public boolean checkBoard() {
     //sprawdzanie wierszy
     for (int i = 0; i < 9; i++) {

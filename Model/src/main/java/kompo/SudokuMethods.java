@@ -8,14 +8,18 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.ResourceBundle;
 
 
 public abstract class SudokuMethods implements Cloneable, Serializable {
     public static final int SIZE = 9;
     private List<SudokuField> fields;
-   // private ResourceBundle listBundle = ResourceBundle.getBundle("WrongSomething");
+    private ResourceBundle listBundle = ResourceBundle.getBundle("kompo.Language");
 
     public SudokuMethods(final List<SudokuField> fields) {
+        if (fields.size() != SIZE) {
+            throw new WrongMethodsException(listBundle.getObject("_wrongLength").toString());
+        }
         this.fields = fields;
     }
 

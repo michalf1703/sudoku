@@ -2,7 +2,9 @@ import kompo.SudokuBoard;
 
 import java.util.HashSet;
 import java.util.Random;
+import java.util.ResourceBundle;
 import java.util.Set;
+
 
 public class Levels {
 
@@ -11,6 +13,7 @@ public class Levels {
 
     private Random rand = new Random();
     private Set<FieldCoordinates> randomPositions = new HashSet<>();
+    private ResourceBundle bundle = ResourceBundle.getBundle("Language");
 
 
     private void fillRandomPositionsList(int capacity) {
@@ -28,37 +31,27 @@ public class Levels {
 
     public SudokuBoard chooseLevel(SudokuBoard sudokuBoard, String level)
             throws EmptyBoardException {
-        if (!(level.equals("UltraEasy") || level.equals("Easy")
-                || level.equals("Medium") || level.equals("Hard"))) {
+        if (!( level.equals(bundle.getString("_lvlEasy"))
+                || level.equals(bundle.getString("_lvlMedium"))
+                || level.equals(bundle.getString("_lvlHard"))
+                || level.equals(bundle.getString("_lvlFromExternal")))) {
             throw new UnknownLevelException();
         } else if (!sudokuBoard.checkBoard()) {
-            throw new EmptyBoardException("Sudoku board has not been filled");
+            throw new EmptyBoardException(bundle.getString("_emptyBoard"));
         }
 
-        switch (level) {
-            case "UltraEasy": {
-                fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[0]);
-                break;
-            }
-            case "Easy": {
-                fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[1]);
-                break;
-            }
-            case "Medium": {
-                fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[2]);
-                break;
-            }
-            case "Hard": {
-                fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[3]);
-                break;
-            }
-            default: {
-                fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[0]);
-            }
+        if (level.equals(bundle.getString("_lvlEasy"))) {
+            fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[1]);
+        }
+         else if (level.equals(bundle.getString("_lvlMedium"))) {
+            fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[2]);
+        } else if (level.equals(bundle.getString("_lvlHard"))) {
+            fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[3]);
         }
 
         for (FieldCoordinates it : randomPositions) {
             sudokuBoard.set(it.getAxisX(), it.getAxisY(), 0);
+            sudokuBoard.setEditableField(it.getAxisX(), it.getAxisY());
         }
 
         return sudokuBoard;

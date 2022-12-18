@@ -3,9 +3,8 @@ package kompo;
 import java.io.Serializable;
 import java.util.ListResourceBundle;
 
-public class WrongSomething_pl extends ListResourceBundle implements Serializable {
+public class Language_pl extends ListResourceBundle implements Serializable {
 
-    /*------------------------ METHODS REGION ------------------------*/
     @Override
     protected Object[][] getContents() {
         return new Object[][]{

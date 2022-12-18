@@ -12,7 +12,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0"
       prefWidth="561.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="BoardWindowControl">
+      fx:controller="BoardWindow">
     <children>
         <GridPane fx:id="sudokuBoardGrid" alignment="CENTER" layoutX="1.0" prefHeight="561.0" prefWidth="561.0">
             <columnConstraints>
@@ -59,9 +59,6 @@
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                     <children>
-                        <Button fx:id="buttonDatabase" layoutX="14.0" layoutY="16.0" mnemonicParsing="false"
-                                onAction="#onActionButtonDatabase" prefHeight="25.0" prefWidth="115.0"
-                                text="Save To Database"/>
                         <Button fx:id="ButtonFile" layoutX="154.0" layoutY="16.0" mnemonicParsing="false"
                                 onAction="#onActionButtonFile" prefHeight="25.0" prefWidth="115.0" text="Save To File"/>
                     </children>

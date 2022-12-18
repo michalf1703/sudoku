@@ -3,6 +3,7 @@ package kompo;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import java.util.ResourceBundle;
 
 import java.io.Serializable;
 
@@ -10,6 +11,7 @@ import java.io.Serializable;
 public class SudokuField implements Serializable,Cloneable, Comparable<SudokuField> {
     private int value;
     private boolean isEmptyField;
+    private ResourceBundle listBundle = ResourceBundle.getBundle("kompo.Language");
 
 
     public SudokuField() {
@@ -24,17 +26,18 @@ public class SudokuField implements Serializable,Cloneable, Comparable<SudokuFie
         return this.value;
     }
 
-  //  public boolean isEmptyField() {
-    //    return isEmptyField;
-    //}
+    public boolean isEmptyField() {
+        return isEmptyField;
+    }
 
-    //public void setEmptyField() {
-        //isEmptyField = true;
-  //  }
+
+    public void setEmptyField() {
+        isEmptyField = true;
+    }
 
     public boolean setFieldValue(int value) {
         if (value < 0 || value > 9) {
-            return false;
+            throw new WrongFieldException(listBundle.getObject("_wrongFieldValue").toString());
         }
         this.value = value;
         return true;
