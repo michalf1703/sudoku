@@ -124,8 +124,8 @@ public class ChoiceWindow {
 
     @FXML
     public void onActionButtonHelp(ActionEvent actionEvent) {
-        popOutWindow.messageBox("",
-                "If u need help, contact the authors ;)", Alert.AlertType.INFORMATION);
+        popOutWindow.messageBox("",bundle.getString("_menuHelpAboutClick")
+                , Alert.AlertType.INFORMATION);
     }
 }
 
