@@ -63,6 +63,10 @@ public class ChoiceWindow {
                 ChoiceWindow.level = comboBoxSystemDifficult
                         .getSelectionModel().getSelectedItem().toString();
             }
+            if (language == null ) {
+                ChoiceWindow.language = comboBoxSystemLang
+                        .getSelectionModel().getSelectedItem().toString();
+            }
             StageSetup.buildStage("boardWindow.fxml", bundle);
             logger.info("Start game");
         } catch (NullPointerException e) {
@@ -81,13 +85,15 @@ public class ChoiceWindow {
 
             if (language.equals(bundle.getString("_comboLang1"))) {
                 Locale.setDefault(new Locale("en"));
+                bundle = ResourceBundle.getBundle("Language");
             } else if (language.equals(bundle.getString("_comboLang2"))) {
                 Locale.setDefault(new Locale("pl"));
+                bundle = ResourceBundle.getBundle("Language");
             }
 
             StageSetup.buildStage("choiceWindow.fxml",
                     bundle.getString("_windowTitle"), bundle);
-            logger.info("Confirm language setttings!");
+            logger.info("Confirm language settings!");
         } catch (NullPointerException e) {
             logger.warning("Bad language settings!");
             popOutWindow.messageBox(bundle.getString("_warning"),

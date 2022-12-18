@@ -40,11 +40,12 @@
                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </padding>
         </GridPane>
-            <Button fx:id="buttonCheck" layoutX="234.0" layoutY="612.0" mnemonicParsing="false" onAction="#onActionButtonCheck" prefHeight="48.0" prefWidth="95.0" text="%_btnCheck">
+            <Button fx:id="buttonCheck" layoutX="32.0" layoutY="625.0" mnemonicParsing="false" onAction="#onActionButtonCheck" prefHeight="48.0" prefWidth="182.0" text="%_btnCheck">
                 <font>
                     <Font size="16.0" />
                 </font>
             </Button>
-            <Button fx:id="ButtonFile" layoutX="432.0" layoutY="660.0" mnemonicParsing="false" onAction="#onActionButtonFile" prefHeight="25.0" prefWidth="115.0" text="%_btnSaveFile" />
+            <Button fx:id="ButtonFile" layoutX="432.0" layoutY="625.0" mnemonicParsing="false" onAction="#onActionButtonFile" prefHeight="25.0" prefWidth="115.0" text="%_btnSaveFile" />
+      <Button layoutX="432.0" layoutY="661.0" mnemonicParsing="false" onAction="#onActionButtonBackToMenu" prefHeight="25.0" prefWidth="115.0" text="%_btnBackToMenu" />
     </children>
 </Pane>

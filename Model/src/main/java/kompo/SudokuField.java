@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class SudokuField implements Serializable,Cloneable, Comparable<SudokuField> {
     private int value;
     private boolean isEmptyField;
-    private ResourceBundle listBundle = ResourceBundle.getBundle("kompo.Language");
+    private ResourceBundle listBundle = ResourceBundle.getBundle("Language");
 
 
     public SudokuField() {

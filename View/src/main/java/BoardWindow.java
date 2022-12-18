@@ -8,6 +8,7 @@ import javafx.stage.FileChooser;
 import kompo.*;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
@@ -130,5 +131,11 @@ public class BoardWindow {
             popOutWindow.messageBox(bundle.getString("_warning"),
                     bundle.getString("_validWindow"), Alert.AlertType.WARNING);
         }
+    }
+    @FXML
+    public void onActionButtonBackToMenu(ActionEvent actionEvent) throws IOException {
+        StageSetup.buildStage( "choiceWindow.fxml",
+                bundle.getString("_windowTitle"), bundle);
+
     }
 }

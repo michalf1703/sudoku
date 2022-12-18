@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5068f16e-ddcb-49b7-8f06-1c0b433a641b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/java/BoardWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/BoardWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/ChoiceWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/ChoiceWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/choiceWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/choiceWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/boardWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/boardWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,6 +208,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.MissingResourceException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
