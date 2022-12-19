@@ -102,16 +102,16 @@ public class BoardWindow {
     @FXML
     private void onActionButtonCheck(ActionEvent actionEvent) {
         if (!isInputValid()) {
-            popOutWindow.messageBox(bundle.getString("_warning"),
-                    bundle.getString("_validWindow"), Alert.AlertType.WARNING);
+            popOutWindow.messageBox(bundle.getString("Warning"),
+                    bundle.getString("WindowValid"), Alert.AlertType.WARNING);
         } else {
             updateBoard();
             if (sudokuBoard.checkBoard()) {
                 popOutWindow.messageBox("",
-                        bundle.getString("_wonWindow"), Alert.AlertType.INFORMATION);
+                        bundle.getString("WindowWonGame"), Alert.AlertType.INFORMATION);
             } else {
                 popOutWindow.messageBox("",
-                        bundle.getString("_lostWindow"), Alert.AlertType.INFORMATION);
+                        bundle.getString("WindowLostGame"), Alert.AlertType.INFORMATION);
             }
         }
     }
@@ -129,19 +129,19 @@ public class BoardWindow {
                 fileSudokuBoardDao.write(sudokuBoard);
             } catch (NullPointerException | DaoException e) {
                 logger.warning("Cannot save to file!");
-                popOutWindow.messageBox(bundle.getString("_warning"),
-                        bundle.getString("_fileWindow"), Alert.AlertType.WARNING);
+                popOutWindow.messageBox(bundle.getString("Warning"),
+                        bundle.getString("WindowFileNotChosen"), Alert.AlertType.WARNING);
             }
         } else {
-            popOutWindow.messageBox(bundle.getString("_warning"),
-                    bundle.getString("_validWindow"), Alert.AlertType.WARNING);
+            popOutWindow.messageBox(bundle.getString("Warning"),
+                    bundle.getString("WindowValid"), Alert.AlertType.WARNING);
         }
     }
 
     @FXML
     public void onActionButtonBackToMenu(ActionEvent actionEvent) throws IOException {
         StageSetup.buildStage("choiceWindow.fxml",
-                bundle.getString("_windowTitle"), bundle);
+                bundle.getString("Title"), bundle);
 
     }
 }

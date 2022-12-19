@@ -41,14 +41,14 @@ public class ChoiceWindow {
     @FXML
     private void initialize() throws IOException {
         comboBoxSystemLang.getItems().addAll(
-                bundle.getString("_comboLang1"),
-                bundle.getString("_comboLang2")
+                bundle.getString("LanEng"),
+                bundle.getString("LanPl")
         );
 
         comboBoxSystemDifficult.getItems().addAll(
-                bundle.getString("_lvlEasy"),
-                bundle.getString("_lvlMedium"),
-                bundle.getString("_lvlHard")
+                bundle.getString("LevelEasy"),
+                bundle.getString("LevelMedium"),
+                bundle.getString("LevelHard")
         );
     }
 
@@ -71,8 +71,8 @@ public class ChoiceWindow {
             logger.info("Start game");
         } catch (NullPointerException e) {
             logger.warning("Bad game settings!");
-            popOutWindow.messageBox(bundle.getString("_warning"),
-                    bundle.getString("_startWindow"), Alert.AlertType.WARNING);
+            popOutWindow.messageBox(bundle.getString("Warning"),
+                    bundle.getString("WindowLanFileNotChosen"), Alert.AlertType.WARNING);
         }
     }
 
@@ -83,21 +83,21 @@ public class ChoiceWindow {
             this.language = comboBoxSystemLang
                     .getSelectionModel().getSelectedItem().toString();
 
-            if (language.equals(bundle.getString("_comboLang1"))) {
+            if (language.equals(bundle.getString("LanEng"))) {
                 Locale.setDefault(new Locale("en"));
                 bundle = ResourceBundle.getBundle("Language");
-            } else if (language.equals(bundle.getString("_comboLang2"))) {
+            } else if (language.equals(bundle.getString("LanPl"))) {
                 Locale.setDefault(new Locale("pl"));
                 bundle = ResourceBundle.getBundle("Language");
             }
 
             StageSetup.buildStage("choiceWindow.fxml",
-                    bundle.getString("_windowTitle"), bundle);
+                    bundle.getString("Title"), bundle);
             logger.info("Confirm language settings!");
         } catch (NullPointerException e) {
             logger.warning("Bad language settings!");
-            popOutWindow.messageBox(bundle.getString("_warning"),
-                    bundle.getString("_langWindow"), Alert.AlertType.WARNING);
+            popOutWindow.messageBox(bundle.getString("Warning"),
+                    bundle.getString("WindowLanNotChosen"), Alert.AlertType.WARNING);
         }
     }
 
@@ -110,12 +110,12 @@ public class ChoiceWindow {
             filename = fileChooser.showOpenDialog(StageSetup.getStage()).getName();
             fileSudokuBoardDao = factory.getFileDao(filename);
             sudokuBoardFromSource = fileSudokuBoardDao.read();
-            ChoiceWindow.level = bundle.getString("_lvlFromExternal");
+            ChoiceWindow.level = bundle.getString("Levelp");
             comboBoxSystemDifficult.setDisable(true);
         } catch (NullPointerException | DaoException e) {
             logger.warning("Cannot read from file!");
-            popOutWindow.messageBox(bundle.getString("_warning"),
-                    bundle.getString("_fileWindow"), Alert.AlertType.WARNING);
+            popOutWindow.messageBox(bundle.getString("Warning"),
+                    bundle.getString("WindowFileNotChosen"), Alert.AlertType.WARNING);
         }
     }
 
@@ -130,7 +130,7 @@ public class ChoiceWindow {
 
     @FXML
     public void onActionButtonHelp(ActionEvent actionEvent) {
-        popOutWindow.messageBox("",bundle.getString("_menuHelpAboutClick"),
+        popOutWindow.messageBox("",bundle.getString("MenuHelpAboutClick"),
                 Alert.AlertType.INFORMATION);
     }
 }

@@ -53,7 +53,7 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
     public void close() {
         ResourceBundle bundle = ResourceBundle.getBundle("Language");
 
-        logger.info(bundle.getString("_closeFile"));
+        logger.info(bundle.getString("FileClose"));
 
     }
 }

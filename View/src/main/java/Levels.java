@@ -32,20 +32,20 @@ public class Levels {
 
     public SudokuBoard chooseLevel(SudokuBoard sudokuBoard, String level)
             throws EmptyBoardException {
-        if (!(level.equals(bundle.getString("_lvlEasy"))
-                || level.equals(bundle.getString("_lvlMedium"))
-                || level.equals(bundle.getString("_lvlHard"))
-                || level.equals(bundle.getString("_lvlFromExternal")))) {
+        if (!(level.equals(bundle.getString("LevelEasy"))
+                || level.equals(bundle.getString("LevelMedium"))
+                || level.equals(bundle.getString("LevelHard"))
+                || level.equals(bundle.getString("Levelp")))) {
             throw new UnknownLevelException();
         } else if (!sudokuBoard.checkBoard()) {
             throw new EmptyBoardException(bundle.getString("_emptyBoard"));
         }
 
-        if (level.equals(bundle.getString("_lvlEasy"))) {
+        if (level.equals(bundle.getString("LevelEasy"))) {
             fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[1]);
-        } else if (level.equals(bundle.getString("_lvlMedium"))) {
+        } else if (level.equals(bundle.getString("LevelMedium"))) {
             fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[2]);
-        } else if (level.equals(bundle.getString("_lvlHard"))) {
+        } else if (level.equals(bundle.getString("LevelHard"))) {
             fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[3]);
         }
 

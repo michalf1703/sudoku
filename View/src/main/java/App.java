@@ -21,7 +21,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         StageSetup.buildStage(stage, "choiceWindow.fxml",
-                bundle.getString("_windowTitle"), bundle);
+                bundle.getString("Title"), bundle);
     }
 
     public static void main(String[] args) {
