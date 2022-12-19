@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.IOException;
+import java.util.ResourceBundle;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -5,12 +9,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
-import kompo.*;
+import kompo.BacktrackingSudokuSolver;
+import kompo.Dao;
+import kompo.DaoException;
+import kompo.SudokuBoard;
+import kompo.SudokuBoardDaoFactory;
+import kompo.SudokuSolver;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ResourceBundle;
-import java.util.logging.Logger;
 
 public class BoardWindow {
 
@@ -132,9 +137,10 @@ public class BoardWindow {
                     bundle.getString("_validWindow"), Alert.AlertType.WARNING);
         }
     }
+
     @FXML
     public void onActionButtonBackToMenu(ActionEvent actionEvent) throws IOException {
-        StageSetup.buildStage( "choiceWindow.fxml",
+        StageSetup.buildStage("choiceWindow.fxml",
                 bundle.getString("_windowTitle"), bundle);
 
     }

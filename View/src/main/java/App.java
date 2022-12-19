@@ -1,9 +1,10 @@
-import javafx.application.Application;
-import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
+import javafx.application.Application;
+import javafx.stage.Stage;
+
+
 
 
 public class App extends Application {

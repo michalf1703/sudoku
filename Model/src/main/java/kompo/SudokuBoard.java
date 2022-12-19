@@ -1,11 +1,12 @@
 package kompo;
 
+import java.io.Serializable;
+import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-import java.io.Serializable;
-import java.util.List;
+
 
 public class SudokuBoard implements Serializable, Cloneable {
 
@@ -37,7 +38,6 @@ public class SudokuBoard implements Serializable, Cloneable {
     }
 
 
-
     public int get(int x, int y) {
         return board[x][y].getFieldValue();
     }
@@ -46,7 +46,7 @@ public class SudokuBoard implements Serializable, Cloneable {
         this.board[x][y].setFieldValue(value);
     }
 
-   public boolean isEditableField(int axisX, int axisY) {
+    public boolean isEditableField(int axisX, int axisY) {
         return board[axisX][axisY].isEmptyField();
     }
 
@@ -55,45 +55,47 @@ public class SudokuBoard implements Serializable, Cloneable {
     }
 
     public boolean checkBoard() {
-    //sprawdzanie wierszy
-    for (int i = 0; i < 9; i++) {
-        for (int j = 0; j < 9; j++) {
-            for (int j2 = j + 1; j2 < 9; j2++) {
-                if (board[i][j].getFieldValue() == board[i][j2].getFieldValue()) {
-                    return false;
-                }
-            }
-        }
-    }
-
-    //sprawdzanie kolumn
-    for (int j = 0; j < 9; j++) {
+        //sprawdzanie wierszy
         for (int i = 0; i < 9; i++) {
-            for (int i2 = i + 1; i2 < 9; i2++) {
-                if (board[i][j].getFieldValue() == board[i2][j].getFieldValue()) {
-                    return false;
-                }
-            }
-        }
-    }
-
-    //sprawdzanie małych kwadratów
-    for (int I = 0; I < 3; I++) {
-        for (int J = 0; J < 3; J++) {
-            //mały kwadrat (I, J)
-            for (int checked = 0; checked < 9; checked++) {
-                for (int compared = checked + 1; compared < 9; compared++) {
-                    if (board[I * 3 + (checked / 3)][J * 3 + (checked % 3)].getFieldValue() ==
-                            board[I * 3 + (compared / 3)][J * 3 + (compared % 3)].getFieldValue()) {
+            for (int j = 0; j < 9; j++) {
+                for (int j2 = j + 1; j2 < 9; j2++) {
+                    if (board[i][j].getFieldValue() == board[i][j2].getFieldValue()) {
                         return false;
                     }
                 }
             }
         }
+
+        //sprawdzanie kolumn
+        for (int j = 0; j < 9; j++) {
+            for (int i = 0; i < 9; i++) {
+                for (int i2 = i + 1; i2 < 9; i2++) {
+                    if (board[i][j].getFieldValue() == board[i2][j].getFieldValue()) {
+                        return false;
+                    }
+                }
+            }
+        }
+
+        //sprawdzanie małych kwadratów
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                //mały kwadrat (I, J)
+                for (int checked = 0; checked < 9; checked++) {
+                    for (int compared = checked + 1; compared < 9; compared++) {
+                        if (board[i * 3 + (checked / 3)][j * 3 + (checked % 3)].getFieldValue()
+                                == board[i * 3 + (compared / 3)][j * 3
+                                + (compared % 3)].getFieldValue()) {
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+
+        return true;
     }
 
-    return true;
-}
     public void solveGame() {
         solver.solve(this);
     }

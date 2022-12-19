@@ -1,11 +1,11 @@
 package kompo;
 
+import java.io.Serializable;
+import java.util.ResourceBundle;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
-import java.util.ResourceBundle;
 
-import java.io.Serializable;
 
 
 public class SudokuField implements Serializable,Cloneable, Comparable<SudokuField> {
@@ -43,6 +43,7 @@ public class SudokuField implements Serializable,Cloneable, Comparable<SudokuFie
         this.value = value;
         return true;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {

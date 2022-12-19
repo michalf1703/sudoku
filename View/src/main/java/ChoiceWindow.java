@@ -1,3 +1,7 @@
+import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -8,10 +12,6 @@ import kompo.DaoException;
 import kompo.SudokuBoard;
 import kompo.SudokuBoardDaoFactory;
 
-import java.io.IOException;
-import java.util.Locale;
-import java.util.ResourceBundle;
-import java.util.logging.Logger;
 
 public class ChoiceWindow {
 
@@ -63,7 +63,7 @@ public class ChoiceWindow {
                 ChoiceWindow.level = comboBoxSystemDifficult
                         .getSelectionModel().getSelectedItem().toString();
             }
-            if (language == null ) {
+            if (language == null) {
                 ChoiceWindow.language = comboBoxSystemLang
                         .getSelectionModel().getSelectedItem().toString();
             }
@@ -130,8 +130,8 @@ public class ChoiceWindow {
 
     @FXML
     public void onActionButtonHelp(ActionEvent actionEvent) {
-        popOutWindow.messageBox("",bundle.getString("_menuHelpAboutClick")
-                , Alert.AlertType.INFORMATION);
+        popOutWindow.messageBox("",bundle.getString("_menuHelpAboutClick"),
+                Alert.AlertType.INFORMATION);
     }
 }
 

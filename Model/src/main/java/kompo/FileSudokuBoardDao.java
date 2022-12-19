@@ -1,6 +1,10 @@
 package kompo;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
 

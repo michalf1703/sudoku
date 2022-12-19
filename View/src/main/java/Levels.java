@@ -1,9 +1,10 @@
-import kompo.SudokuBoard;
-
 import java.util.HashSet;
 import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.Set;
+import kompo.SudokuBoard;
+
+
 
 
 public class Levels {
@@ -31,7 +32,7 @@ public class Levels {
 
     public SudokuBoard chooseLevel(SudokuBoard sudokuBoard, String level)
             throws EmptyBoardException {
-        if (!( level.equals(bundle.getString("_lvlEasy"))
+        if (!(level.equals(bundle.getString("_lvlEasy"))
                 || level.equals(bundle.getString("_lvlMedium"))
                 || level.equals(bundle.getString("_lvlHard"))
                 || level.equals(bundle.getString("_lvlFromExternal")))) {
@@ -42,8 +43,7 @@ public class Levels {
 
         if (level.equals(bundle.getString("_lvlEasy"))) {
             fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[1]);
-        }
-         else if (level.equals(bundle.getString("_lvlMedium"))) {
+        } else if (level.equals(bundle.getString("_lvlMedium"))) {
             fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[2]);
         } else if (level.equals(bundle.getString("_lvlHard"))) {
             fillRandomPositionsList(BASIC_LEVEL * MULTIPLIER_LEVEL_ARRAY[3]);
