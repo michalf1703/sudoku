@@ -9,12 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
-import kompo.BacktrackingSudokuSolver;
-import kompo.Dao;
-import kompo.DaoException;
-import kompo.SudokuBoard;
-import kompo.SudokuBoardDaoFactory;
-import kompo.SudokuSolver;
+import kompo.*;
 
 
 public class BoardWindow {

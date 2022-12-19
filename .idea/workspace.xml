@@ -6,17 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="5068f16e-ddcb-49b7-8f06-1c0b433a641b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2222" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/FileSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/FileSudokuBoardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuBox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/View/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/BoardWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/BoardWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/ChoiceWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/ChoiceWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/Levels.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/Levels.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/StageSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/StageSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/resources/Language_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/resources/Language_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/resources/Language_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/resources/Language_pl.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boli" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dupa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/haaas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/halko" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kon" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/konik" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotki" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kurde" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mleko" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/no" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ostatnia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pieee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pies" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/piesek" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/szok" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testowanie" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xyz" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,20 +110,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SudokuFX (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SudokuFX" />
-      <module name="ModelProject" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SudokuFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SudokuFX" />
-      <module name="Sudoku" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="All in ModelProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ModelProject" />
       <option name="PACKAGE_NAME" value="" />
@@ -132,10 +133,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FileSudokuBoardDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModelProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kompo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kompo" />
+      <option name="MAIN_CLASS_NAME" value="kompo.FileSudokuBoardDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileSudokuBoardDaoTest.closeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModelProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kompo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kompo" />
+      <option name="MAIN_CLASS_NAME" value="kompo.FileSudokuBoardDaoTest" />
+      <option name="METHOD_NAME" value="closeTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.App" />
-      <item itemvalue="Application.SudokuFX" />
-      <item itemvalue="Application.SudokuFX (1)" />
+      <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
+      <item itemvalue="JUnit.FileSudokuBoardDaoTest.closeTest" />
       <item itemvalue="JUnit.All in ModelProject" />
       <item itemvalue="JUnit.BacktrackingSudokuTest" />
     </list>
@@ -143,9 +175,9 @@
       <list>
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.All in ModelProject" />
+        <item itemvalue="JUnit.FileSudokuBoardDaoTest" />
+        <item itemvalue="JUnit.FileSudokuBoardDaoTest.closeTest" />
         <item itemvalue="JUnit.BacktrackingSudokuTest" />
-        <item itemvalue="Application.SudokuFX (1)" />
-        <item itemvalue="Application.SudokuFX" />
       </list>
     </recent_temporary>
   </component>
@@ -200,6 +232,7 @@
       <workItem from="1671422866057" duration="8535000" />
       <workItem from="1671431598796" duration="2863000" />
       <workItem from="1671445947374" duration="862000" />
+      <workItem from="1671448069601" duration="3916000" />
     </task>
     <servers />
   </component>
@@ -224,6 +257,11 @@
           <properties class="java.util.MissingResourceException" package="java.util" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/View/src/main/java/App.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

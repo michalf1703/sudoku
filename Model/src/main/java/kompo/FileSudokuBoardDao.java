@@ -28,9 +28,9 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
              ObjectInputStream objectInputStream = new ObjectInputStream(fileInputSream)) {
             obj = (SudokuBoard) objectInputStream.readObject();
         } catch (ClassNotFoundException e) {
-            throw new WrongFileException(bundle.getString("_cannonFindFile"), e.getCause());
+            throw new WrongFileException(bundle.getString("NotFoundFile"), e.getCause());
         } catch (IOException e) {
-            throw new WrongFileException(bundle.getString("_IOException"), e.getCause());
+            throw new WrongFileException(bundle.getString("/IOException"), e.getCause());
         }
 
         return obj;
@@ -44,7 +44,7 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
              ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
             objectOutputStream.writeObject(obj);
         } catch (IOException e) {
-            throw new WrongFileException(bundle.getString("_IOException"), e.getCause());
+            throw new WrongFileException(bundle.getString("/IOException"), e.getCause());
         }
 
     }

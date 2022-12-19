@@ -18,7 +18,7 @@ public abstract class SudokuMethods implements Cloneable, Serializable {
 
     public SudokuMethods(final List<SudokuField> fields) {
         if (fields.size() != SIZE) {
-            throw new WrongMethodsException(listBundle.getObject("_wrongLength").toString());
+            throw new WrongMethodsException(listBundle.getObject("WrongLength").toString());
         }
         this.fields = fields;
     }
