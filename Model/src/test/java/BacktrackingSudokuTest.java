@@ -2,7 +2,6 @@ package kompo;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class BacktrackingSudokuTest {
@@ -66,14 +65,14 @@ public class BacktrackingSudokuTest {
     //TESTY DLA FILLBOARD, GENEROWANIE INNYCH PLANSZY
 
     //@Test
-   public void solveRepeatTest() {
-        SudokuBoard obj1 = new SudokuBoard();
-        SudokuBoard obj2 = new SudokuBoard();
-        solve.solve(obj1);
-        solve.solve(obj2);
+ //  public void solveRepeatTest() {
+   //     SudokuBoard obj1 = new SudokuBoard();
+     //   SudokuBoard obj2 = new SudokuBoard();
+       // solve.solve(obj1);
+        //solve.solve(obj2);
 
-        assertTrue(!obj1.equals(obj2));
-    }
+        //assertTrue(!obj1.equals(obj2));
+   // }
 
 
 }

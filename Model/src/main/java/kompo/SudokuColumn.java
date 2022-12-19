@@ -9,7 +9,7 @@ public class SudokuColumn extends SudokuMethods {
     }
 
     @Override
-    public Object clone() {
+    public Object clone() throws CloneNotSupportedException {
         List<SudokuField> fields = new ArrayList<>(getSudokuMethodsList());
         return new SudokuColumn(fields);
     }

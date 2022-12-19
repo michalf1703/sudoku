@@ -20,62 +20,8 @@ public class SudokuBoardTest {
     private SudokuRow sudokuRow;
     private SudokuRow sudokuRowSecond;
 
-    public int [][] exampleBoardGood = {
-            {5,3,4,6,7,8,9,1,2},
-            {6,7,2,1,9,5,3,4,8},
-            {1,9,8,3,4,2,5,6,7},
-            {8,5,9,7,6,1,4,2,3},
-            {4,2,6,8,5,3,7,9,1},
-            {7,1,3,9,2,4,8,5,6},
-            {9,6,1,5,3,7,2,8,4},
-            {2,8,7,4,1,9,6,3,5},
-            {3,4,5,2,8,6,1,7,9}
-    };
 
-    public int [][] exampleBoardGood2 = {
-            {5,3,4,6,7,8,9,1,2},
-            {6,7,2,1,9,5,3,4,8},
-            {1,9,8,3,4,2,5,6,7},
-            {8,5,9,7,6,1,4,2,3},
-            {4,2,6,8,5,3,7,9,1},
-            {7,1,3,9,2,4,8,5,6},
-            {9,6,1,5,3,7,2,8,4},
-            {2,8,7,4,1,9,6,3,5},
-            {3,4,5,2,8,6,1,7,9}
-    };
-    public int [][] exampleBoardWrongRow = {
-            {5,5,4,6,7,8,9,1,2},
-            {6,7,2,1,9,5,3,4,8},
-            {1,9,8,3,4,2,5,6,7},
-            {8,5,9,7,6,1,4,2,3},
-            {4,2,6,8,5,3,7,9,1},
-            {7,1,3,9,2,4,8,5,6},
-            {9,6,1,5,3,7,2,8,4},
-            {2,8,7,4,1,9,6,3,5},
-            {3,4,5,2,8,6,1,7,9}
-    };
-    public int [][] exampleBoardWrongColumn = {
-            {6,3,4,5,7,8,9,1,2},
-            {6,7,2,1,9,5,3,4,8},
-            {1,9,8,3,4,2,5,6,7},
-            {8,5,9,7,6,1,4,2,3},
-            {4,2,6,8,5,3,7,9,1},
-            {7,1,3,9,2,4,8,5,6},
-            {9,6,1,5,3,7,2,8,4},
-            {2,8,7,4,1,9,6,3,5},
-            {3,4,5,2,8,6,1,7,9}
-    };
-    public int [][] exampleBoardWrongSquare = {
-            {0,3,4,6,7,8,9,1,2},
-            {6,0,2,1,9,5,3,4,8},
-            {1,9,8,3,4,2,5,6,7},
-            {8,5,9,7,6,1,4,2,3},
-            {4,2,6,8,5,3,7,9,1},
-            {7,1,3,9,2,4,8,5,6},
-            {9,6,1,5,3,7,2,8,4},
-            {2,8,7,4,1,9,6,3,5},
-            {3,4,5,2,8,6,1,7,9}
-    };
+
     private SudokuBox makeObjectWithValidList1() {
         return new SudokuBox(Arrays.asList(
                 new SudokuField(1),
@@ -123,14 +69,7 @@ public class SudokuBoardTest {
     }
 
 
- /*  @Test
-    public void checkValidTest(){
-        assertTrue(sudokuBoard.checkBoard(exampleBoardGood));
-        assertFalse(sudokuBoard.checkBoard(exampleBoardWrongRow));
-        assertFalse(sudokuBoard.checkBoard(exampleBoardWrongColumn));
-        assertFalse(sudokuBoard.checkBoard(exampleBoardWrongSquare));
-    }
-*/
+
 
     @Test
     public void getAndSetTest() {
@@ -215,7 +154,11 @@ public class SudokuBoardTest {
     @Test
     public void CloneTestColumn() {
         sudokuColumn = makeObjectWithValidList();
-        sudokuColumnSecond = (SudokuColumn) sudokuColumn.clone();
+        try {
+            sudokuColumnSecond = (SudokuColumn) sudokuColumn.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
 
         assertTrue(sudokuColumn.equals(sudokuColumnSecond)
                 && sudokuColumnSecond.equals(sudokuColumn));
@@ -224,7 +167,11 @@ public class SudokuBoardTest {
     @Test
     public void CloneTestBox()  {
         sudokuBox = makeObjectWithValidList1();
-        sudokuBoxSecond = (SudokuBox) sudokuBox.clone();
+        try {
+            sudokuBoxSecond = (SudokuBox) sudokuBox.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
 
         assertTrue(sudokuBox.equals(sudokuBoxSecond)
                 && sudokuBoxSecond.equals(sudokuBox));
@@ -233,7 +180,11 @@ public class SudokuBoardTest {
     @Test
     public void CloneTestRow() {
         sudokuRow = makeObjectWithValidList2();
-        sudokuRowSecond = (SudokuRow) sudokuRow.clone();
+        try {
+            sudokuRowSecond = (SudokuRow) sudokuRow.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
 
         assertTrue(sudokuRow.equals(sudokuRowSecond)
                 && sudokuRowSecond.equals(sudokuRow));

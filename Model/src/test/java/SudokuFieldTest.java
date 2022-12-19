@@ -31,10 +31,11 @@ public class SudokuFieldTest {
 
    @Test
     public void setWrongOrGoodFieldValueTest() {
-      assertFalse(sudokuField.setFieldValue(-1));
-      assertFalse(sudokuField.setFieldValue(10));
       assertTrue(sudokuField.setFieldValue(5));
       assertTrue(sudokuField.setFieldValue(9));
+       assertThrows(WrongFieldException.class, () -> {sudokuField.setFieldValue(25);});
+
+       assertThrows(WrongFieldException.class, () -> {sudokuField.setFieldValue(-8);});
 
     }
     @Test
@@ -51,11 +52,9 @@ public class SudokuFieldTest {
         SudokuField field2 = new SudokuField();
         SudokuField field4 = new SudokuField();
         SudokuField field5 = new SudokuField();
-        SudokuField field3;
 
         BacktrackingSudokuSolver back = new BacktrackingSudokuSolver();
-//        SudokuBoard board1 = new SudokuBoard(back);
-        field3 = field1;
+        SudokuBoard board1 = new SudokuBoard(back);
         field1.setFieldValue(1);
         field2.setFieldValue(7);
         field4.setFieldValue(1);

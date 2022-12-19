@@ -36,6 +36,7 @@ public class SudokuField implements Serializable,Cloneable, Comparable<SudokuFie
     }
 
     public boolean setFieldValue(int value) {
+        ResourceBundle bundle = ResourceBundle.getBundle("Language");
         if (value < 0 || value > 9) {
             throw new WrongFieldException(listBundle.getObject("_wrongFieldValue").toString());
         }
@@ -69,6 +70,7 @@ public class SudokuField implements Serializable,Cloneable, Comparable<SudokuFie
 
     @Override
     public int compareTo(SudokuField o) {
+        ResourceBundle bundle = ResourceBundle.getBundle("Language");
         if (o != null) {
             if (this.getFieldValue() == o.getFieldValue()) {
                 return 0;
@@ -78,7 +80,7 @@ public class SudokuField implements Serializable,Cloneable, Comparable<SudokuFie
                 return -1;
             }
         } else {
-            throw new NullPointerException("Null");
+            throw new NullPointerException(bundle.getString("_cannotBeNull"));
         }
     }
 

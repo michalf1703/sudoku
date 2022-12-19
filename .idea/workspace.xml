@@ -5,13 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5068f16e-ddcb-49b7-8f06-1c0b433a641b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuBoardException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongFieldsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/src/main/resources/Language_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/src/main/resources/Language_pl.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/src/main/resources/logging.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/ModelProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ModelProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Model/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/DaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/DaoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/FileSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/FileSudokuBoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/Language_eng.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/Language_pl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuColumn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/BoardWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/BoardWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/ChoiceWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/ChoiceWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuRow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongFieldException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongFieldException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongFileException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongFileException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/test/java/BacktrackingSudokuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/BacktrackingSudokuTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/test/java/FileSudokuBoardDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/FileSudokuBoardDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuFieldTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/boardWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/boardWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/logging.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/logging.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +47,8 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="module-info" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,43 +71,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hp/Desktop/sprawdz&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3264368&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Hp/Desktop/kompo/REPO/jm_pn_1200_07/Sudoku",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3264368",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\Model\src\main\resources" />
+      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\View\src\main\resources" />
+      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\Model\src\main\java\kompo" />
       <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\View" />
       <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku" />
-      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\Model" />
-      <recent name="C:\Users\artur\IdeaProjects\repo\jm_pn_1200_07" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\View\src\main\resources" />
+      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\Model\src\main\resources" />
       <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\View\src\main\java" />
       <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\Model\src\main\java" />
       <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\View\src\main\java\sudoku" />
-      <recent name="C:\Users\Hp\Desktop\kompo\REPO\jm_pn_1200_07\Sudoku\View\src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="ViewProject" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;&quot;C:\Users\artur\OneDrive\Pulpit\bakap\openjfx-19_windows-x64_bin-sdk\javafx-sdk-19\lib&quot;&quot; --add-modules javafx.controls,javafx.fxml " />
+      <option name="VM_PARAMETERS" value="--module-path &quot;&quot;C:\Users\Hp\IdeaProjects\gulon\openjfx-19_windows-x64_bin-sdk\javafx-sdk-19\lib&quot;&quot; --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -192,6 +213,10 @@
       <workItem from="1671367185147" duration="12820000" />
       <workItem from="1671380086353" duration="11520000" />
       <workItem from="1671394341785" duration="4142000" />
+      <workItem from="1671410285517" duration="5043000" />
+      <workItem from="1671415366877" duration="7361000" />
+      <workItem from="1671422866057" duration="8535000" />
+      <workItem from="1671431598796" duration="2863000" />
     </task>
     <servers />
   </component>

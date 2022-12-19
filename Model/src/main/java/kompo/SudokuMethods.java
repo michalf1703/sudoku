@@ -14,7 +14,7 @@ import java.util.ResourceBundle;
 public abstract class SudokuMethods implements Cloneable, Serializable {
     public static final int SIZE = 9;
     private List<SudokuField> fields;
-    private ResourceBundle listBundle = ResourceBundle.getBundle("kompo.Language");
+    private ResourceBundle listBundle = ResourceBundle.getBundle("Language");
 
     public SudokuMethods(final List<SudokuField> fields) {
         if (fields.size() != SIZE) {
