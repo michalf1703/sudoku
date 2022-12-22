@@ -12,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/resources/Language_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/resources/Language_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/resources/Language_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/resources/Language_pl.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/java/BoardWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/BoardWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boli" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dupa" beforeDir="false" />
@@ -232,7 +233,7 @@
       <workItem from="1671422866057" duration="8535000" />
       <workItem from="1671431598796" duration="2863000" />
       <workItem from="1671445947374" duration="862000" />
-      <workItem from="1671448069601" duration="3916000" />
+      <workItem from="1671448069601" duration="4390000" />
     </task>
     <servers />
   </component>
