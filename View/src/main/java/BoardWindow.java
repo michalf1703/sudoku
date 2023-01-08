@@ -159,4 +159,7 @@ public class BoardWindow {
         logger.info("Back to menu");
 
     }
+
+    public void onActionButtonDatabase(ActionEvent actionEvent) {
+    }
 }

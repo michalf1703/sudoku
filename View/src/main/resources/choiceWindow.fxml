@@ -42,6 +42,7 @@
             <menus>
                 <Menu mnemonicParsing="false" text="%MenuLoad">
                     <items>
+                  <MenuItem fx:id="buttonDatabase" mnemonicParsing="false" onAction="#onActionButtonDatabase" text="%MenuLoadDatabase" />
                         <MenuItem fx:id="buttonFile" mnemonicParsing="false" onAction="#onActionButtonFile" text="%MenuLoadFile" />
                     </items>
                 </Menu>

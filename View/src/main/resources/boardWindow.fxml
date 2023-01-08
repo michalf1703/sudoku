@@ -45,7 +45,8 @@
                     <Font size="16.0" />
                 </font>
             </Button>
-            <Button fx:id="ButtonFile" layoutX="432.0" layoutY="625.0" mnemonicParsing="false" onAction="#onActionButtonFile" prefHeight="25.0" prefWidth="115.0" text="%ButtonFileSave" />
-      <Button layoutX="432.0" layoutY="661.0" mnemonicParsing="false" onAction="#onActionButtonBackToMenu" prefHeight="25.0" prefWidth="115.0" text="%ButtonBackToMenu" />
+            <Button fx:id="ButtonFile" layoutX="394.0" layoutY="625.0" mnemonicParsing="false" onAction="#onActionButtonFile" prefHeight="25.0" prefWidth="115.0" text="%ButtonFileSave" />
+      <Button layoutX="394.0" layoutY="661.0" mnemonicParsing="false" onAction="#onActionButtonBackToMenu" prefHeight="25.0" prefWidth="115.0" text="%ButtonBackToMenu" />
+      <Button fx:id="ButtonDatabase" layoutX="375.0" layoutY="588.0" mnemonicParsing="false" onAction="#onActionButtonDatabase" prefHeight="25.0" prefWidth="153.0" text="%ButtonDatabaseSave" />
     </children>
 </Pane>

@@ -5,44 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5068f16e-ddcb-49b7-8f06-1c0b433a641b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/CustomConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/src/main/java/SudokuBoardAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/ModelProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ModelProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Model/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/DaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/DaoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/FileSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/FileSudokuBoardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuBoardDaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuBoardDaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/SudokuField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongFieldException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongFieldException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongFieldsException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongFileException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/kompo/WrongFileException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/resources/Language_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/resources/Language_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/resources/Language_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/resources/Language_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/resources/logging.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/test/java/FileSudokuBoardDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/FileSudokuBoardDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuFieldTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/test/java/SudokuMethodsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/SudokuMethodsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sudoku.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/ViewProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/View/ViewProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/View/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SudokuAppLog.log" beforeDir="false" afterPath="$PROJECT_DIR$/SudokuAppLog.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/BoardWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/BoardWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/java/ChoiceWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/ChoiceWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/Language_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/resources/logging.properties" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abc.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cccc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/essa" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/halo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xxx.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xxxxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/boardWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/boardWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/src/main/resources/choiceWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/resources/choiceWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,20 +52,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Hp/Desktop/matiego/M_Grzeszczak_K_Czernik_zad_11",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3264368",
-    "settings.editor.selected.configurable": "editor.preferences.import"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hp/Desktop/matiego/M_Grzeszczak_K_Czernik_zad_11&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3264368&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -119,7 +89,7 @@
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="ViewProject" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Hp\IdeaProjects\gulon\openjfx-19_windows-x64_bin-sdk\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\artur\OneDrive\Pulpit\bakap\openjfx-19_windows-x64_bin-sdk\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

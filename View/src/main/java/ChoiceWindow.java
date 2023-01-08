@@ -152,6 +152,9 @@ public class ChoiceWindow {
         popOutWindow.messageBox("",bundle.getString("MenuHelpAboutClick"),
                 Alert.AlertType.INFORMATION);
     }
+
+    public void onActionButtonDatabase(ActionEvent actionEvent) {
+    }
 }
 
 
