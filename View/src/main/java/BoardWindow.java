@@ -1,7 +1,7 @@
-import java.io.File;
-import java.io.IOException;
-import java.util.ResourceBundle;
-import java.util.logging.Logger;
+import javafx.beans.property.adapter.JavaBeanIntegerProperty;
+import javafx.beans.property.adapter.JavaBeanIntegerPropertyBuilder;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -9,7 +9,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
+import javafx.util.StringConverter;
 import kompo.*;
+import org.apache.log4j.Logger;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ResourceBundle;
 
 
 public class BoardWindow {
@@ -17,6 +23,8 @@ public class BoardWindow {
     @FXML
     private GridPane sudokuBoardGrid;
 
+    private final StringConverter converter = new CustomConverter();
+    private JavaBeanIntegerProperty[][] fieldValueProperty = new JavaBeanIntegerProperty[9][9];
     private PopOutWindow popOutWindow = new PopOutWindow();
     private ResourceBundle bundle = ResourceBundle.getBundle("Language");
     private static final Logger logger = Logger.getLogger(BoardWindow.class.getName());
@@ -34,6 +42,7 @@ public class BoardWindow {
 
     @FXML
     private void initialize() throws EmptyBoardException {
+        logger.info("Loading board...");
         if (ChoiceWindow.getSudokuBoardFromSource() != null) {
             sudokuBoard = ChoiceWindow.getSudokuBoardFromSource();
         } else {
@@ -47,19 +56,36 @@ public class BoardWindow {
 
     private void fillGrid() {
         for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                TextField textField = new TextField();
-                textField.setMinSize(50, 50);
-                textField.setFont(Font.font(18));
-
-                if (!(sudokuBoard.get(i, j) == 0 || sudokuBoard.isEditableField(i, j))) {
-                    textField.setDisable(true);
-                    textField.setText(String.valueOf(sudokuBoard.get(i, j)));
-                } else if (sudokuBoard.get(i, j) != 0 && sudokuBoard.isEditableField(i, j)) {
-                    textField.setText(String.valueOf(sudokuBoard.get(i, j)));
+            for (int k = 0; k < 9; k++) {
+                TextField label = new TextField();
+                label.setMinSize(50,65);
+                label.setFont(Font.font(20));
+                if (sudokuBoard.get(i, k) != 0) {
+                    label.setDisable(true);
                 }
+                try {
+                    fieldValueProperty[i][k] = JavaBeanIntegerPropertyBuilder.create()
+                            .bean(new SudokuBoardAdapter(sudokuBoard, i, k))
+                            .name("Field")
+                            .build();
+                }
+                catch (NoSuchMethodException e){
+                    logger.info("Cannot build required property");
 
-                sudokuBoardGrid.add(textField, j, i);
+                }
+                label.textProperty().bindBidirectional(fieldValueProperty[i][k], converter);
+                label.textProperty().addListener(new ChangeListener<String>() {
+                    @Override
+                    public void changed(ObservableValue<? extends String> observable, String previous, String current) {
+                        if (!((current.matches("[1-9]")) || (current.equals("")))) {
+                            label.setText(previous);
+                        }
+                    }
+                });
+                if (sudokuBoard.get(i, k) == 0) {
+                    label.clear();
+                }
+                sudokuBoardGrid.add(label, k, i);
             }
         }
     }
@@ -113,30 +139,24 @@ public class BoardWindow {
 
 
     @FXML
-    private void onActionButtonFile(ActionEvent actionEvent) {
-        fileChooser = new FileChooser();
-
-        if (isInputValid()) {
-            updateBoard();
-            try {
-                file = fileChooser.showSaveDialog(StageSetup.getStage());
-                fileSudokuBoardDao = factory.getFileDao(file.getName());
-                fileSudokuBoardDao.write(sudokuBoard);
-            } catch (NullPointerException | DaoException e) {
-                logger.warning("Cannot save to file!");
-                popOutWindow.messageBox(bundle.getString("Warning"),
-                        bundle.getString("WindowFileNotChosen"), Alert.AlertType.WARNING);
-            }
-        } else {
-            popOutWindow.messageBox(bundle.getString("Warning"),
-                    bundle.getString("WindowValid"), Alert.AlertType.WARNING);
+    public void onActionButtonFile() throws DaoException {
+        FileChooser fileChooser = new FileChooser();
+        ResourceBundle bundle = ResourceBundle.getBundle("Language");
+        try {
+            File file = fileChooser.showSaveDialog(StageSetup.getStage());
+            Dao<SudokuBoard> fileSudokuBoardDao = SudokuBoardDaoFactory.getFileDao(file.getAbsolutePath());
+            fileSudokuBoardDao.write(sudokuBoard);
+        } catch (NullPointerException e) {
+            throw new WrongFileException(bundle.getString("IOException"), e.getCause());
         }
+
     }
 
     @FXML
     public void onActionButtonBackToMenu(ActionEvent actionEvent) throws IOException {
         StageSetup.buildStage("choiceWindow.fxml",
                 bundle.getString("Title"), bundle);
+        logger.info("Back to menu");
 
     }
 }

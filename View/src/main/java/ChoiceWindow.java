@@ -1,7 +1,3 @@
-import java.io.IOException;
-import java.util.Locale;
-import java.util.ResourceBundle;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -11,6 +7,11 @@ import kompo.Dao;
 import kompo.DaoException;
 import kompo.SudokuBoard;
 import kompo.SudokuBoardDaoFactory;
+import org.apache.log4j.Logger;
+
+import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 
 public class ChoiceWindow {
@@ -30,12 +31,18 @@ public class ChoiceWindow {
     private static String level;
     private static String language;
 
+    /*--------*/
+
     public static String getLevel() {
         return level;
     }
 
     public static String getLanguage() {
         return language;
+    }
+
+    public static SudokuBoard getSudokuBoardFromSource() {
+        return sudokuBoardFromSource;
     }
 
     @FXML
@@ -52,9 +59,7 @@ public class ChoiceWindow {
         );
     }
 
-    public static SudokuBoard getSudokuBoardFromSource() {
-        return sudokuBoardFromSource;
-    }
+
 
     @FXML
     private void onActionButtonStartGame(ActionEvent actionEvent) throws IOException {
@@ -70,7 +75,7 @@ public class ChoiceWindow {
             StageSetup.buildStage("boardWindow.fxml", bundle);
             logger.info("Start game");
         } catch (NullPointerException e) {
-            logger.warning("Bad game settings!");
+            logger.info("Bad game settings!");
             popOutWindow.messageBox(bundle.getString("Warning"),
                     bundle.getString("WindowLanFileNotChosen"), Alert.AlertType.WARNING);
         }
@@ -95,7 +100,7 @@ public class ChoiceWindow {
                     bundle.getString("Title"), bundle);
             logger.info("Confirm language settings!");
         } catch (NullPointerException e) {
-            logger.warning("Bad language settings!");
+            logger.info("Bad language settings!");
             popOutWindow.messageBox(bundle.getString("Warning"),
                     bundle.getString("WindowLanNotChosen"), Alert.AlertType.WARNING);
         }
@@ -113,13 +118,27 @@ public class ChoiceWindow {
             ChoiceWindow.level = bundle.getString("Levelp");
             comboBoxSystemDifficult.setDisable(true);
         } catch (NullPointerException | DaoException e) {
-            logger.warning("Cannot read from file!");
+            logger.info("Cannot read from file!");
             popOutWindow.messageBox(bundle.getString("Warning"),
                     bundle.getString("WindowFileNotChosen"), Alert.AlertType.WARNING);
         }
     }
 
+    public void onActionButtonFile() {
+        String filename;
+        FileChooser fileChooser = new FileChooser();
 
+        try {
+            filename = fileChooser.showOpenDialog(StageSetup.getStage()).getAbsolutePath();
+            sudokuBoardFromSource = SudokuBoardDaoFactory.getFileDao(filename).read();
+            StageSetup.buildStage("boardWindow.fxml", bundle);
+        } catch (NullPointerException | IOException e) {
+            logger.info(bundle.getString("_cannotReadFile"));
+        }
+
+
+
+    }
     @FXML
     private void onActionButtonAuthors(ActionEvent actionEvent) {
         ResourceBundle listBundle = ResourceBundle.getBundle("AuthorsListResourceBundle");

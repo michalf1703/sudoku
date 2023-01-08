@@ -1,12 +1,9 @@
 package kompo;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import org.apache.log4j.Logger;
+
+import java.io.*;
 import java.util.ResourceBundle;
-import java.util.logging.Logger;
 
 
 
@@ -24,13 +21,13 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
     public SudokuBoard read() throws DaoException {
         SudokuBoard obj = null;
         ResourceBundle bundle = ResourceBundle.getBundle("Language");
-        try (FileInputStream fileInputSream = new FileInputStream(filename);
-             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputSream)) {
+        try (FileInputStream fileInputfileInputStream = new FileInputStream(filename);
+             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputfileInputStream)) {
             obj = (SudokuBoard) objectInputStream.readObject();
         } catch (ClassNotFoundException e) {
             throw new WrongFileException(bundle.getString("NotFoundFile"), e.getCause());
         } catch (IOException e) {
-            throw new WrongFileException(bundle.getString("/IOException"), e.getCause());
+            throw new WrongFileException(bundle.getString("IOException"), e.getCause());
         }
 
         return obj;
@@ -44,13 +41,13 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
              ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
             objectOutputStream.writeObject(obj);
         } catch (IOException e) {
-            throw new WrongFileException(bundle.getString("/IOException"), e.getCause());
+            throw new WrongFileException(bundle.getString("IOException"), e.getCause());
         }
 
     }
 
     @Override
-    public void close() {
+    public void close() throws DaoException {
         ResourceBundle bundle = ResourceBundle.getBundle("Language");
 
         logger.info(bundle.getString("FileClose"));

@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SudokuMethodsTest {
 
     @Test
-    public void verifyValidTest() {
+    public void verifyValidTest() throws WrongFieldException {
         SudokuMethods sudokuRow = new SudokuColumn(Arrays.asList(
                 new SudokuField(1),
                 new SudokuField(2),
@@ -24,7 +24,7 @@ public class SudokuMethodsTest {
     }
 
     @Test
-    public void verifyInvalidTest() {
+    public void verifyInvalidTest() throws WrongFieldException {
         SudokuMethods sudokuRow = new SudokuMethods(Arrays.asList(
                 new SudokuField(1),
                 new SudokuField(2),
@@ -40,7 +40,7 @@ public class SudokuMethodsTest {
     }
 
     @Test
-    public void getFieldsTest() {
+    public void getFieldsTest() throws WrongFieldException {
         SudokuMethods sudokuRow = new SudokuMethods(Arrays.asList(
                 new SudokuField(1),
                 new SudokuField(2),
@@ -64,7 +64,7 @@ public class SudokuMethodsTest {
     }
 
     @Test
-    public void toStringTest() {
+    public void toStringTest() throws WrongFieldException {
         SudokuMethods sudokuRow = new SudokuMethods(Arrays.asList(
                 new SudokuField(1),
                 new SudokuField(2),
@@ -80,7 +80,7 @@ public class SudokuMethodsTest {
     }
 
     @Test
-    public void equalsTest() {
+    public void equalsTest() throws WrongFieldException {
         SudokuMethods sudokuRow = new SudokuMethods(Arrays.asList(
                 new SudokuField(1),
                 new SudokuField(2),
@@ -108,7 +108,7 @@ public class SudokuMethodsTest {
     }
 
     @Test
-    public void hashCodeTest() {
+    public void hashCodeTest() throws WrongFieldException {
         SudokuMethods sudokuRow = new SudokuMethods(Arrays.asList(
                 new SudokuField(1),
                 new SudokuField(2),

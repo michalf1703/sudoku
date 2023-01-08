@@ -1,14 +1,18 @@
 package kompo;
 
-import java.io.Serializable;
-import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.log4j.Logger;
+
+import java.io.Serializable;
+import java.util.List;
 
 
 
 public class SudokuBoard implements Serializable, Cloneable {
+
+    private static final Logger logger = Logger.getLogger(SudokuBoard.class.getName());
 
     private SudokuSolver solver;
 
@@ -43,7 +47,12 @@ public class SudokuBoard implements Serializable, Cloneable {
     }
 
     public void set(int x, int y, int value) {
-        this.board[x][y].setFieldValue(value);
+        try {
+            board[x][y].setFieldValue(value);
+        } catch (WrongFieldException e) {
+            logger.error("Tried to input invalid value into board");
+
+        }
     }
 
     public boolean isEditableField(int axisX, int axisY) {
@@ -97,7 +106,11 @@ public class SudokuBoard implements Serializable, Cloneable {
     }
 
     public void solveGame() {
-        solver.solve(this);
+        try {
+            solver.solve(this);
+        } catch (WrongFieldException e) {
+            logger.error("Tried to input invalid value into board");
+        }
     }
 
     public SudokuRow getRow(int row) {
@@ -158,12 +171,16 @@ public class SudokuBoard implements Serializable, Cloneable {
 
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                bordzik.set(i, j, this.get(i, j));
+                try {
+                    bordzik.set(i, j, this.get(i, j));
+                } catch (WrongFieldException e) {
+                    logger.info("Tried to input invalid value into board");
+                }
             }
         }
-
-        return bordzik;
+            return bordzik;
     }
+
 
 }
 

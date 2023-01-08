@@ -12,7 +12,7 @@ public class FileSudokuBoardDaoTest {
     private SudokuBoard sudokuBoard;
     private Dao<SudokuBoard> fileSudokuBoardDao;
     private SudokuBoardDaoFactory daoFactory;
-    private SudokuBoard sudokuBoardSecond;
+
 
     @BeforeEach
     public void setUp() {
@@ -22,25 +22,17 @@ public class FileSudokuBoardDaoTest {
 
     }
 
-  /*  @Test
-    public void writeAndReadTest() throws Exception {
-        fileSudokuBoardDao = daoFactory.getFileDao("file.txt");
-        fileSudokuBoardDao.write(sudokuBoard);
 
-        secondSudokuBoard = fileSudokuBoardDao.read();
-        assertEquals(sudokuBoard, secondSudokuBoard);
-    }
-*/
 
 
     @Test
-    public void readExceptionTest() {
+    public void readExceptionTest() throws DaoException, WrongFileException, WrongFieldException {
         fileSudokuBoardDao = daoFactory.getFileDao("nieznany.txt");
         assertThrows(WrongFileException.class, () -> fileSudokuBoardDao.read());
     }
 
     @Test
-    public void writeExceptionTest(){
+    public void writeExceptionTest() throws DaoException, WrongFileException, WrongFieldException  {
         fileSudokuBoardDao = daoFactory.getFileDao("?");
         assertThrows(WrongFileException.class, () -> fileSudokuBoardDao.write(sudokuBoard));
     }

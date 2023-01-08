@@ -44,7 +44,7 @@ public class SudokuFieldTest {
     }
 
     @Test
-    public void equalsTest() {
+    public void equalsTest() throws WrongFieldException {
         sudokuFieldSecond = new SudokuField();
         assertTrue(sudokuField.equals(sudokuFieldSecond)
                 && sudokuFieldSecond.equals(sudokuField));
@@ -79,7 +79,7 @@ public class SudokuFieldTest {
     }
 
     @Test
-    public void hashCodeTest() {
+    public void hashCodeTest() throws WrongFieldException {
         sudokuFieldSecond = new SudokuField();
         assertEquals(sudokuField.hashCode(), sudokuFieldSecond.hashCode());
 
@@ -103,7 +103,7 @@ public class SudokuFieldTest {
     }
 
     @Test
-    public void hashCodeAndEqualsTest() {
+    public void hashCodeAndEqualsTest() throws WrongFieldException {
         SudokuField sb = new SudokuField();
         SudokuField sb2 = sb;
         int hash1;
@@ -115,7 +115,7 @@ public class SudokuFieldTest {
     }
 
     @Test
-    public void compareToTest() {
+    public void compareToTest() throws WrongFieldException {
         sudokuFieldSecond = new SudokuField();
 
         sudokuField.setFieldValue(4);

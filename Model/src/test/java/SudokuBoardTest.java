@@ -60,8 +60,7 @@ public class SudokuBoardTest {
                 new SudokuField(9)));
     }
 
-    //SudokuBoard boardzik = new SudokuBoard(exampleBoardGood);
-    //SudokuBoard boardzik1 = new SudokuBoard(exampleBoardGood2);
+
     @BeforeEach
     public void setUp() {
         SudokuSolver solvik = new BacktrackingSudokuSolver();
@@ -78,26 +77,13 @@ public class SudokuBoardTest {
         assertEquals(sudokuBoard.get(1, 2), 3);
     }
 
- /*   @Test
-    public void ConstructorTest() {
-        boolean z = true;
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++){
-                if (boardzik.get(i,j) != boardzik1.get(i,j)) {
-                    z = false;
-                    break;
-                }
-            }
-        }
-    }
 
-*/
     @Test
     public void toStringTest() {
         assertNotNull(sudokuBoard.toString());
     }
     @Test
-    public void equalsTest() {
+    public void equalsTest() throws WrongFieldException {
         assertTrue(sudokuBoard.equals(sudokuBoard));
 
         BacktrackingSudokuSolver backtrackingSudokuSolver = new BacktrackingSudokuSolver();
@@ -121,7 +107,7 @@ public class SudokuBoardTest {
 
 
     @Test
-    public void hashCodeTest() {
+    public void hashCodeTest() throws WrongFieldException {
         List<List<SudokuField>> board = Arrays.asList(new List[9]);
 
         for (int i = 0; i < 9; i++) {
@@ -139,20 +125,20 @@ public class SudokuBoardTest {
 
 
    @Test
-    public void getRowTest() {
+    public void getRowTest() throws WrongFieldException {
         assertNotNull(sudokuBoard.getRow(3));
     }
     @Test
-    public void getColumnTest() {
+    public void getColumnTest() throws WrongFieldException {
         assertNotNull(sudokuBoard.getColumn(5));
     }
 
     @Test
-    public void getBoxTest() {
+    public void getBoxTest() throws WrongFieldException {
         assertNotNull(sudokuBoard.getBox(1, 1));
     }
     @Test
-    public void CloneTestColumn() {
+    public void CloneTestColumn() throws WrongFieldException {
         sudokuColumn = makeObjectWithValidList();
         try {
             sudokuColumnSecond = (SudokuColumn) sudokuColumn.clone();
@@ -165,7 +151,7 @@ public class SudokuBoardTest {
     }
 
     @Test
-    public void CloneTestBox()  {
+    public void CloneTestBox() throws WrongFieldException {
         sudokuBox = makeObjectWithValidList1();
         try {
             sudokuBoxSecond = (SudokuBox) sudokuBox.clone();
@@ -178,7 +164,7 @@ public class SudokuBoardTest {
     }
 
     @Test
-    public void CloneTestRow() {
+    public void CloneTestRow() throws WrongFieldException {
         sudokuRow = makeObjectWithValidList2();
         try {
             sudokuRowSecond = (SudokuRow) sudokuRow.clone();
@@ -191,7 +177,7 @@ public class SudokuBoardTest {
     }
 
     @Test
-    public void cloneTest()  {
+    public void cloneTest()  throws WrongFieldException {
         BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
         solver.solve(sudokuBoard);
         sudokuBoardSecond = (SudokuBoard) sudokuBoard.clone();

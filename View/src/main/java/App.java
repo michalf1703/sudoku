@@ -1,18 +1,17 @@
-import java.io.IOException;
-import java.util.ResourceBundle;
-import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+import org.apache.log4j.Logger;
 
-
+import java.io.IOException;
+import java.util.ResourceBundle;
 
 public class App extends Application {
 
     private static final Logger logger = Logger.getLogger(App.class.getName());
 
     static {
-        String configPath = App.class.getClassLoader().getResource("logging.properties").getFile();
+        String configPath = App.class.getClassLoader().getResource("log4j.properties").getFile();
         System.setProperty("java.util.logging.config.file", configPath);
     }
 
