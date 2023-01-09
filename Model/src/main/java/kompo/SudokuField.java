@@ -1,11 +1,14 @@
 package kompo;
 
+import java.io.Serializable;
+import java.util.ResourceBundle;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-import java.io.Serializable;
-import java.util.ResourceBundle;
+
+
+
 
 
 
@@ -37,7 +40,6 @@ public class SudokuField implements Serializable,Cloneable, Comparable<SudokuFie
     }
 
     public boolean setFieldValue(int value) {
-        ResourceBundle bundle = ResourceBundle.getBundle("Language");
         if (value < 0 || value > 9) {
             throw new WrongFieldException(listBundle.getObject("WrongFieldValue").toString());
         }

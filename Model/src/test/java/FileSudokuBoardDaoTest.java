@@ -23,8 +23,6 @@ public class FileSudokuBoardDaoTest {
     }
 
 
-
-
     @Test
     public void readExceptionTest() throws DaoException, WrongFileException, WrongFieldException {
         fileSudokuBoardDao = daoFactory.getFileDao("nieznany.txt");
@@ -32,17 +30,17 @@ public class FileSudokuBoardDaoTest {
     }
 
     @Test
-    public void writeExceptionTest() throws DaoException, WrongFileException, WrongFieldException  {
+    public void writeExceptionTest() throws DaoException, WrongFileException, WrongFieldException {
         fileSudokuBoardDao = daoFactory.getFileDao("?");
         assertThrows(WrongFileException.class, () -> fileSudokuBoardDao.write(sudokuBoard));
     }
 
     @Test
-    public void closeTest() throws Exception{
+    public void closeTest() throws Exception {
 
         fileSudokuBoardDao = daoFactory.getFileDao("file.txt");
         fileSudokuBoardDao.close();
 
     }
 
-}
+    }

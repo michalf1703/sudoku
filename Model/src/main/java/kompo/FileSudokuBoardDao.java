@@ -1,9 +1,16 @@
 package kompo;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ResourceBundle;
 import org.apache.log4j.Logger;
 
-import java.io.*;
-import java.util.ResourceBundle;
+
+
+
 
 
 
@@ -22,7 +29,8 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
         SudokuBoard obj = null;
         ResourceBundle bundle = ResourceBundle.getBundle("Language");
         try (FileInputStream fileInputfileInputStream = new FileInputStream(filename);
-             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputfileInputStream)) {
+             ObjectInputStream objectInputStream =
+                     new ObjectInputStream(fileInputfileInputStream)) {
             obj = (SudokuBoard) objectInputStream.readObject();
         } catch (ClassNotFoundException e) {
             throw new WrongFileException(bundle.getString("NotFoundFile"), e.getCause());
@@ -46,7 +54,7 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard> {
 
     }
 
-    @Override
+
     public void close() throws DaoException {
         ResourceBundle bundle = ResourceBundle.getBundle("Language");
 

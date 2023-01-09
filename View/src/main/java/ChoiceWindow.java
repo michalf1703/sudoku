@@ -1,3 +1,6 @@
+import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -9,9 +12,7 @@ import kompo.SudokuBoard;
 import kompo.SudokuBoardDaoFactory;
 import org.apache.log4j.Logger;
 
-import java.io.IOException;
-import java.util.Locale;
-import java.util.ResourceBundle;
+
 
 
 public class ChoiceWindow {
@@ -25,11 +26,12 @@ public class ChoiceWindow {
     private ResourceBundle bundle = ResourceBundle.getBundle("Language");
     private static final Logger logger = Logger.getLogger(ChoiceWindow.class.getName());
     private SudokuBoardDaoFactory factory = new SudokuBoardDaoFactory();
-    private Dao<SudokuBoard> fileSudokuBoardDao;
     private FileChooser fileChooser;
     private static SudokuBoard sudokuBoardFromSource;
     private static String level;
+    private Dao<SudokuBoard> jdbcSudokuBoardDao;
     private static String language;
+    private static SudokuBoard sudokuBoardFromDatabase;
 
     /*--------*/
 
@@ -37,8 +39,17 @@ public class ChoiceWindow {
         return level;
     }
 
+
     public static String getLanguage() {
         return language;
+    }
+
+    public static SudokuBoard getSudokuBoardFromDatabase() {
+        return sudokuBoardFromDatabase;
+    }
+
+    public static void setSudokuBoardFromDatabase() {
+        sudokuBoardFromDatabase = null;
     }
 
     public static SudokuBoard getSudokuBoardFromSource() {
@@ -46,7 +57,7 @@ public class ChoiceWindow {
     }
 
     @FXML
-    private void initialize() throws IOException {
+    public void initialize() throws IOException {
         comboBoxSystemLang.getItems().addAll(
                 bundle.getString("LanEng"),
                 bundle.getString("LanPl")
@@ -62,7 +73,7 @@ public class ChoiceWindow {
 
 
     @FXML
-    private void onActionButtonStartGame(ActionEvent actionEvent) throws IOException {
+    public void onActionButtonStartGame() throws IOException {
         try {
             if (level == null) {
                 ChoiceWindow.level = comboBoxSystemDifficult
@@ -83,7 +94,7 @@ public class ChoiceWindow {
 
 
     @FXML
-    private void onActionButtonConfirmLang(ActionEvent actionEvent) throws IOException {
+    public void onActionButtonConfirmLang() throws IOException {
         try {
             this.language = comboBoxSystemLang
                     .getSelectionModel().getSelectedItem().toString();
@@ -106,23 +117,7 @@ public class ChoiceWindow {
         }
     }
 
-    @FXML
-    private void onActionButtonFile(ActionEvent actionEvent) {
-        String filename;
-        fileChooser = new FileChooser();
 
-        try {
-            filename = fileChooser.showOpenDialog(StageSetup.getStage()).getName();
-            fileSudokuBoardDao = factory.getFileDao(filename);
-            sudokuBoardFromSource = fileSudokuBoardDao.read();
-            ChoiceWindow.level = bundle.getString("Levelp");
-            comboBoxSystemDifficult.setDisable(true);
-        } catch (NullPointerException | DaoException e) {
-            logger.info("Cannot read from file!");
-            popOutWindow.messageBox(bundle.getString("Warning"),
-                    bundle.getString("WindowFileNotChosen"), Alert.AlertType.WARNING);
-        }
-    }
 
     public void onActionButtonFile() {
         String filename;
@@ -139,11 +134,12 @@ public class ChoiceWindow {
 
 
     }
+
     @FXML
-    private void onActionButtonAuthors(ActionEvent actionEvent) {
+    public void onActionButtonAuthors() {
         ResourceBundle listBundle = ResourceBundle.getBundle("AuthorsListResourceBundle");
         popOutWindow.messageBox("",
-                (listBundle.getObject("1. ") + "\n" + listBundle.getObject("2. ")),
+                listBundle.getObject("1. ") + "\n" + listBundle.getObject("2. "),
                 Alert.AlertType.INFORMATION);
     }
 
@@ -153,8 +149,28 @@ public class ChoiceWindow {
                 Alert.AlertType.INFORMATION);
     }
 
-    public void onActionButtonDatabase(ActionEvent actionEvent) {
+    @FXML
+   public void inactionbuttondatabase() {
+
+        String filename;
+        fileChooser = new FileChooser();
+
+        try {
+            filename = fileChooser.showOpenDialog(StageSetup.getStage()).getName();
+            jdbcSudokuBoardDao = factory.getDatabaseDao(filename);
+            sudokuBoardFromSource = jdbcSudokuBoardDao.read();
+            ChoiceWindow.level = bundle.getString("default_level");
+            comboBoxSystemDifficult.setDisable(true);
+        } catch (NullPointerException | DaoException e) {
+            logger.info("Cannot read from database!");
+            popOutWindow.messageBox(bundle.getString("Error_database"),
+                    bundle.getString("Error_database"), Alert.AlertType.WARNING);
+        }
+
     }
+
+
+
 }
 
 

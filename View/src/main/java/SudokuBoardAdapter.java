@@ -1,4 +1,4 @@
-import kompo.*;
+import kompo.SudokuBoard;
 
 public class SudokuBoardAdapter {
     private SudokuBoard board;
@@ -15,7 +15,7 @@ public class SudokuBoardAdapter {
         return board.get(row, column);
     }
 
-    public void setField(int value){
+    public void setField(int value) {
         board.set(row, column, value);
     }
 }

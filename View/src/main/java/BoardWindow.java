@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.IOException;
+import java.util.ResourceBundle;
 import javafx.beans.property.adapter.JavaBeanIntegerProperty;
 import javafx.beans.property.adapter.JavaBeanIntegerPropertyBuilder;
 import javafx.beans.value.ChangeListener;
@@ -10,12 +13,17 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.util.StringConverter;
-import kompo.*;
+import kompo.BacktrackingSudokuSolver;
+import kompo.Dao;
+import kompo.DaoException;
+import kompo.SudokuBoard;
+import kompo.SudokuBoardDaoFactory;
+import kompo.SudokuSolver;
+import kompo.WrongFileException;
 import org.apache.log4j.Logger;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ResourceBundle;
+
+
 
 
 public class BoardWindow {
@@ -30,18 +38,16 @@ public class BoardWindow {
     private static final Logger logger = Logger.getLogger(BoardWindow.class.getName());
     private SudokuSolver solver1 = new BacktrackingSudokuSolver();
     private SudokuBoard sudokuBoard = new SudokuBoard(solver1);
-    private SudokuBoard sudokuBoardCopy = new SudokuBoard();
     private BacktrackingSudokuSolver solver = new BacktrackingSudokuSolver();
     private Levels difficultyLevel = new Levels();
-
     private SudokuBoardDaoFactory factory = new SudokuBoardDaoFactory();
-    private Dao<SudokuBoard> fileSudokuBoardDao;
+    private Dao<SudokuBoard> jdbcSudokuBoardDao;
     private FileChooser fileChooser;
     private File file;
 
 
     @FXML
-    private void initialize() throws EmptyBoardException {
+    public void initialize() throws EmptyBoardException {
         logger.info("Loading board...");
         if (ChoiceWindow.getSudokuBoardFromSource() != null) {
             sudokuBoard = ChoiceWindow.getSudokuBoardFromSource();
@@ -68,16 +74,16 @@ public class BoardWindow {
                             .bean(new SudokuBoardAdapter(sudokuBoard, i, k))
                             .name("Field")
                             .build();
-                }
-                catch (NoSuchMethodException e){
+                } catch (NoSuchMethodException e) {
                     logger.info("Cannot build required property");
 
                 }
                 label.textProperty().bindBidirectional(fieldValueProperty[i][k], converter);
                 label.textProperty().addListener(new ChangeListener<String>() {
                     @Override
-                    public void changed(ObservableValue<? extends String> observable, String previous, String current) {
-                        if (!((current.matches("[1-9]")) || (current.equals("")))) {
+                    public void changed(ObservableValue<? extends
+                            String> observable, String previous, String current) {
+                        if (!(current.matches("[1-9]") || current.equals(""))) {
                             label.setText(previous);
                         }
                     }
@@ -96,7 +102,7 @@ public class BoardWindow {
 
         for (int i = 0; i < 81; i++) {
             String fieldValue = ((TextField) sudokuBoardGrid.getChildren().get(i)).getText();
-            if (!((fieldValue.matches("[1-9]")) || (fieldValue.equals("")))) {
+            if (!(fieldValue.matches("[1-9]") || fieldValue.equals(""))) {
                 isValid = false;
             }
         }
@@ -119,9 +125,8 @@ public class BoardWindow {
         }
     }
 
-
     @FXML
-    private void onActionButtonCheck(ActionEvent actionEvent) {
+    public void onActionButtonCheck() {
         if (!isInputValid()) {
             popOutWindow.messageBox(bundle.getString("Warning"),
                     bundle.getString("WindowValid"), Alert.AlertType.WARNING);
@@ -144,7 +149,8 @@ public class BoardWindow {
         ResourceBundle bundle = ResourceBundle.getBundle("Language");
         try {
             File file = fileChooser.showSaveDialog(StageSetup.getStage());
-            Dao<SudokuBoard> fileSudokuBoardDao = SudokuBoardDaoFactory.getFileDao(file.getAbsolutePath());
+            Dao<SudokuBoard> fileSudokuBoardDao =
+                    SudokuBoardDaoFactory.getFileDao(file.getAbsolutePath());
             fileSudokuBoardDao.write(sudokuBoard);
         } catch (NullPointerException e) {
             throw new WrongFileException(bundle.getString("IOException"), e.getCause());
@@ -153,13 +159,35 @@ public class BoardWindow {
     }
 
     @FXML
-    public void onActionButtonBackToMenu(ActionEvent actionEvent) throws IOException {
+    public void onActionButtonBackToMenu(ActionEvent actionEvent) throws IOException, IOException {
         StageSetup.buildStage("choiceWindow.fxml",
                 bundle.getString("Title"), bundle);
         logger.info("Back to menu");
 
     }
 
-    public void onActionButtonDatabase(ActionEvent actionEvent) {
+    @FXML
+    public void onActionButtonDatabase() {
+        fileChooser = new FileChooser();
+
+        if (isInputValid()) {
+            updateBoard();
+
+            try {
+
+                file = fileChooser.showSaveDialog(StageSetup.getStage());
+                jdbcSudokuBoardDao = factory.getDatabaseDao(file.getName());
+                jdbcSudokuBoardDao.write(sudokuBoard);
+
+            } catch (NullPointerException | DaoException e) {
+
+                logger.info("Unable to save to DTB!");
+                popOutWindow.messageBox(bundle.getString("_warning"),
+                        bundle.getString("_fileWindow"), Alert.AlertType.WARNING);
+            }
+        } else {
+            popOutWindow.messageBox(bundle.getString("_warning"),
+                    bundle.getString("_validWindow"), Alert.AlertType.WARNING);
+        }
     }
 }

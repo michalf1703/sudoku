@@ -1,12 +1,14 @@
 package kompo;
 
+import java.io.Serializable;
+import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.log4j.Logger;
 
-import java.io.Serializable;
-import java.util.List;
+
+
 
 
 
@@ -92,9 +94,9 @@ public class SudokuBoard implements Serializable, Cloneable {
                 //mały kwadrat (I, J)
                 for (int checked = 0; checked < 9; checked++) {
                     for (int compared = checked + 1; compared < 9; compared++) {
-                        if (board[i * 3 + (checked / 3)][j * 3 + (checked % 3)].getFieldValue()
-                                == board[i * 3 + (compared / 3)][j * 3
-                                + (compared % 3)].getFieldValue()) {
+                        if (board[i * 3 + checked / 3][j * 3 + checked % 3].getFieldValue()
+                                == board[i * 3 + compared / 3][j * 3
+                                + compared % 3].getFieldValue()) {
                             return false;
                         }
                     }
@@ -181,7 +183,24 @@ public class SudokuBoard implements Serializable, Cloneable {
             return bordzik;
     }
 
+    public SudokuBoard stringToBoard(String str) throws InvalidFieldInputException {
+        for (int i = 0; i < 9; i++) {
+            for (int k = 0; k < 9; k++) {
+                set(i, k, Character.getNumericValue(str.charAt(i * 9 + k)));
+            }
+        }
+        return this;
+    }
 
+    public String boardToString() {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < 9; i++) {
+            for (int k = 0; k < 9; k++) {
+                builder.append(String.valueOf(get(i, k)));
+            }
+        }
+        return builder.toString();
+    }
 }
 
 

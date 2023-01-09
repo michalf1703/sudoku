@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
@@ -48,5 +49,6 @@
             <Button fx:id="ButtonFile" layoutX="394.0" layoutY="625.0" mnemonicParsing="false" onAction="#onActionButtonFile" prefHeight="25.0" prefWidth="115.0" text="%ButtonFileSave" />
       <Button layoutX="394.0" layoutY="661.0" mnemonicParsing="false" onAction="#onActionButtonBackToMenu" prefHeight="25.0" prefWidth="115.0" text="%ButtonBackToMenu" />
       <Button fx:id="ButtonDatabase" layoutX="375.0" layoutY="588.0" mnemonicParsing="false" onAction="#onActionButtonDatabase" prefHeight="25.0" prefWidth="153.0" text="%ButtonDatabaseSave" />
+        <TextField fx:id="TextFieldSave" layoutX="248.0" layoutY="588.0" onAction="#onActionButtonDatabase" prefHeight="25.0" prefWidth="115.0" promptText="save" />
     </children>
 </Pane>
