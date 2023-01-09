@@ -1,4 +1,5 @@
 import kompo.*;
+import org.apache.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -6,13 +7,15 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class JdbcSudokuBoardDaoTest {
 
     private SudokuBoard sudokuBoard;
 
     private SudokuBoard secondSudokuBoard;
+
+    private static final Logger logger = Logger.getLogger(JdbcSudokuBoardDao.class.getName());
 
     @BeforeEach
     public void setUp() {
@@ -45,29 +48,28 @@ public class JdbcSudokuBoardDaoTest {
 
     @Test
     public void testDatabaseReadWrite() throws IOException, InvalidFieldInputException {
-
         Files.deleteIfExists(Paths.get("./SudokuDatabase"));
         SudokuBoard boardA = generateBoard();
         SudokuBoard boardB = generateBoard();
 
-
         try (Dao<SudokuBoard> dbDao = SudokuBoardDaoFactory.getDatabaseDao("Test1")) {
             dbDao.write(boardA);
-            System.out.println("Saved to database");
+            logger.debug("Saved to database");
         } catch (DaoException e) {
-            System.out.println("Cannot save to database");
+            logger.debug("Cannot save to database");
         } catch (Exception e) {
-            System.out.println("Unknown error.");
+            logger.debug("Unknown error.");
         }
 
         try (Dao<SudokuBoard> dbDao = SudokuBoardDaoFactory.getDatabaseDao("Test1");) {
             SudokuBoard board1 = dbDao.read();
-            //assertEquals(boardA, board1);
-            System.out.println("Loaded from database");
+            assertEquals(boardA, board1);
+            assertNotSame(boardA,board1);
+            logger.debug("Loaded from database");
         } catch (DaoException ex) {
-            System.out.println("Cannot load from database");
+            logger.debug("Cannot load from database");
         } catch (Exception e) {
-            System.out.println("Unknown error.");
+            logger.debug("Unknown error.");
         }
 
     }
