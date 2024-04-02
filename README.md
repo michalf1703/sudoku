@@ -6,8 +6,6 @@ SUDOKU GAME 🎮👨🏽‍💻
   <br>
 </h1>
 
-## Sudoku Solver
-
 ### Description
 Sudoku Solver project is a Java application that allows solving and generating Sudoku puzzles. The application utilizes advanced algorithms for generating puzzles and solving them.
 
